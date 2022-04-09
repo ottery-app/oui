@@ -1,46 +1,53 @@
-import TextInput from "./TextInput";
 import React from "react";
-import "./css/input.css";
+import Text from "./Text";
 
 export function Input({
+    id,
+    className,
     type="text",
-    title,
-    onChange= () => {},
+    label,
     value,
-    borderColor="blue",
-    backgroundColor="inheret",
-}){
-    const [hasContent, setHasContent] = React.useState((value)?true:false);
+    regexp,
+    onChange= ()=>{},
+}) {
+    const [input, setInput] = React.useState();
+    const [content, setContent] = React.useState();
+    const [color, setColor] = React.useState();
 
-    let inner;
 
-    let oc = (e) => {
-        setHasContent((e.target.value)?true:false);
-        onChange(e);
-    }
-
-    switch(type) {
-        case "text":
-            inner = (
-                <TextInput 
-                    value={value}
-                    onChange={oc}
-                />
-            );
-            break;
-        default:
-            throw new Error("invalid input type given");
+    React.useEffect(()=>{
+        if (regexp) {
+            new RegExp(regexp).test(content) ? setColor("success") : setColor("error"); ;
         }
+    },[content]);
+
+
+    React.useEffect(()=>{
+        switch (type) {
+            case "text":
+            case "password":
+                setInput(
+                    <Text
+                        type={type}
+                        id={id}
+                        className={className}
+                        label={label}
+                        value={value}
+                        color={color}
+                        onChange={(e)=>{
+                            onChange(e);
+                            setContent(e.target.value);
+                        }}
+                    />
+                );
+                break;
+            default:
+                throw new Error("Input type not supported");
+        }
+    })
+
 
     return (
-        <div className="ottery-ui-input" 
-            style={{
-                backgroundColor : backgroundColor,
-                border: `1px solid ${borderColor}`,
-            }}
-        >
-            <label className={(hasContent)?"up":""}>{title}</label>
-            <div className={(hasContent)?"down":""}>{inner}</div>
-        </div>
+        <div className="ottery-ui-input input">{input}</div>
     );
 }
