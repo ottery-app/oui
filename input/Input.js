@@ -1,53 +1,43 @@
 import React from "react";
 import Text from "./Text";
+import Date from "./Date";
+import Menu from "./Menu";
 
-export function Input({
-    id,
-    className,
-    type="text",
-    label,
-    value,
-    regexp,
-    onChange= ()=>{},
-}) {
-    const [input, setInput] = React.useState();
-    const [content, setContent] = React.useState();
-    const [color, setColor] = React.useState();
+Input.defaultProps = {
+    type: "text",
+}
 
+function Input(props) {
+    const className = (props.className) ? props.className + " " + props.type : props.type; 
 
-    React.useEffect(()=>{
-        if (regexp) {
-            new RegExp(regexp).test(content) ? setColor("success") : setColor("error"); ;
-        }
-    },[content]);
+    let input;
 
-
-    React.useEffect(()=>{
-        switch (type) {
-            case "text":
-            case "password":
-                setInput(
-                    <Text
-                        type={type}
-                        id={id}
-                        className={className}
-                        label={label}
-                        value={value}
-                        color={color}
-                        onChange={(e)=>{
-                            onChange(e);
-                            setContent(e.target.value);
-                        }}
-                    />
-                );
-                break;
-            default:
-                throw new Error("Input type not supported");
-        }
-    })
-
+    switch (props.type) {
+        case "text":
+        case "password":
+            input = (
+                <Text {...props} className={className} />
+            );
+            break;
+        case "date":
+            input = (
+                <Date {...props} className={className} />
+            );
+            break;
+        case "menu":
+        case "states":
+        case "countries":
+            input = (
+                <Menu {...props} className={className} />
+            );
+            break;
+        default:
+            throw new Error("Input type not supported");
+    }
 
     return (
         <div className="ottery-ui-input input">{input}</div>
     );
 }
+
+export default Input;

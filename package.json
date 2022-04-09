@@ -1,5 +1,5 @@
 {
-  "name": "ottery-ui",
+  "name": "oui",
   "version": "1.0.0",
   "description": "this is the ui framework which follows the ottery schema",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ottery-app/ottery-ui.git"
+    "url": "git+https://github.com/ottery-app/oui.git"
   },
   "keywords": [
     "ui",
@@ -23,9 +23,16 @@
   },
   "homepage": "https://github.com/ottery-app/ottery-ui#readme",
   "dependencies": {
+    "@date-io/date-fns": "^2.13.1",
+    "@date-io/dayjs": "^2.13.1",
+    "@date-io/luxon": "^2.13.1",
+    "@date-io/moment": "^2.13.1",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@mui/lab": "^5.0.0-alpha.76",
     "@mui/material": "^5.6.0",
+    "axios": "^0.26.1",
+    "dayjs": "^1.11.0",
     "react": "^18.0.0"
   }
 }

@@ -1,10 +1,14 @@
 import { TextField } from "@mui/material";
 
-export default function Text(props) {
+function Date(props) {
     return (
         <TextField 
-            type={props.type}
+            type="date"
+            InputLabelProps={{ shrink: true}}
             {...props}
         />
     );
 }
+
+
+export default Date
