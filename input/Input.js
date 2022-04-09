@@ -1,7 +1,9 @@
+import "./css/input.css";
+
 import React from "react";
-import Text from "./Text";
-import Date from "./Date";
-import Menu from "./Menu";
+import Text from "./inputs/Text";
+import Date from "./inputs/Date";
+import Menu from "./inputs/Menu";
 
 Input.defaultProps = {
     type: "text",
