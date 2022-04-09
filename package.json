@@ -1,0 +1,25 @@
+{
+  "name": "ottery-ui",
+  "version": "1.0.0",
+  "description": "this is the ui framework which follows the ottery schema",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ottery-app/ottery-ui.git"
+  },
+  "keywords": [
+    "ui",
+    "framework",
+    "ottery",
+    "react"
+  ],
+  "author": "lewibs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ottery-app/ottery-ui/issues"
+  },
+  "homepage": "https://github.com/ottery-app/ottery-ui#readme"
+}
