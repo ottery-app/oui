@@ -38,7 +38,7 @@ function Input(props) {
     }
 
     return (
-        <div className="ottery-ui-input input">{input}</div>
+        <div className="oui-input input">{input}</div>
     );
 }
 
