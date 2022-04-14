@@ -1,9 +1,9 @@
 import Input from "./input/Input";
-import InfoButton from "./buttons/InfoButton";
+import ImageButton from "./buttons/ImageButton";
 import Image from "./images/Image";
 
 export{
     Input,
-    InfoButton,
+    ImageButton,
     Image,
 }
