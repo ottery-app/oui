@@ -4,13 +4,14 @@ import Image from "../images/Image";
 import {primary, secondary, text} from "../colors";
 
 function ImageButton({
+    id,
+    className,
     left,
     right,
     content,
     primaryColor=primary,
     secondaryColor=secondary,
     textColor=text,
-    className,
     radius="50px"
 }) {
     const [leftimg] = React.useState(
@@ -32,7 +33,7 @@ function ImageButton({
         border-radius: ${radius};
         background-color: ${primaryColor};
         color: ${textColor};
-        border: 2px solid ${secondaryColor};
+        border: 1px solid ${secondaryColor};
         &:hover {
             filter: brightness(90%);
         }
@@ -43,7 +44,7 @@ function ImageButton({
     `;
 
     return (
-        <Button className={className} >
+        <Button id={id} className={"oui-image-button" + (className) ? " " + className : className}>
             <Canvas>{leftimg}</Canvas>
             <div>{content}</div>
             <Canvas>{rightimg}</Canvas>

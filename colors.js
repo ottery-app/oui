@@ -1,3 +1,3 @@
-export const primary = "red";
-export const secondary = "green";
+export const primary = "white";
+export const secondary = "#C4C4C4";
 export const text = "black"
