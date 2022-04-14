@@ -42,8 +42,6 @@ export default function Menu(props) {
                 console.error("something went wrong. 1. check that the link you provided was correct. 2. the link should be to a json array with this format: [{\"name\":\"val\"}]", error);
             });
         }
-
-
     }, []);
 
     return (

@@ -32,15 +32,11 @@ function Input(props) {
     },[]);
 
     const Field = styled.div`
-        min-height: 44px;
-        min-width: 44px;
-        max-width: 500px;
-        width: 100%;
-        background-color: red;
+        padding: 0px;
     `;
 
     return (
-        <Field id={props.id} className={`oui-input ${props.classname} ${type}`}>{type}</Field>
+        <Field id={props.id} className={`oui-input ${props.className}`}>{type}</Field>
     );
 }
 

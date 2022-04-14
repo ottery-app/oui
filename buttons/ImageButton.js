@@ -1,7 +1,8 @@
 import React from "react";
 import styled from 'styled-components';
 import Image from "../images/Image";
-import {primary, secondary, text} from "../colors";
+import {primary, secondary, text} from "../styles/colors";
+import { minHeight, minWidth, onHover } from "../styles/clickable";
 
 function ImageButton({
     id,
@@ -26,16 +27,15 @@ function ImageButton({
         display: grid;
         grid-template-columns: 44px auto 44px;
         align-items: center;
-        min-height: 44px;
-        min-width: 44px;
-        max-width: 500px;
-        width: 100%;
+        min-height: ${minHeight};
+        min-width: ${minWidth};
+        width:100%;
         border-radius: ${radius};
         background-color: ${primaryColor};
         color: ${textColor};
         border: 1px solid ${secondaryColor};
         &:hover {
-            filter: brightness(90%);
+            ${onHover}
         }
     `;
 
@@ -44,7 +44,7 @@ function ImageButton({
     `;
 
     return (
-        <Button id={id} className={"oui-image-button" + (className) ? " " + className : className}>
+        <Button id={id} className={"oui-image-button " + className}>
             <Canvas>{leftimg}</Canvas>
             <div>{content}</div>
             <Canvas>{rightimg}</Canvas>
