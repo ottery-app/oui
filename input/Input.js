@@ -1,6 +1,6 @@
-import "./css/input.css";
-
 import React from "react";
+import styled from 'styled-components';
+
 import Text from "./inputs/Text";
 import Date from "./inputs/Date";
 import Menu from "./inputs/Menu";
@@ -10,35 +10,37 @@ Input.defaultProps = {
 }
 
 function Input(props) {
-    const className = (props.className) ? props.className + " " + props.type : props.type; 
+    const [type, setType] = React.useState();
+    
+    React.useEffect(()=>{
+        switch (props.type) {
+            case "text":
+            case "password":
+                setType(<Text {...props} />);
+                break;
+            case "date":
+                setType(<Date {...props} />);
+                break;
+            case "menu":
+            case "states":
+            case "countries":
+                setType(<Menu {...props} />);
+                break;
+            default:
+                throw new Error("Input type not supported");
+        }
+    },[]);
 
-    let input;
-
-    switch (props.type) {
-        case "text":
-        case "password":
-            input = (
-                <Text {...props} className={className} />
-            );
-            break;
-        case "date":
-            input = (
-                <Date {...props} className={className} />
-            );
-            break;
-        case "menu":
-        case "states":
-        case "countries":
-            input = (
-                <Menu {...props} className={className} />
-            );
-            break;
-        default:
-            throw new Error("Input type not supported");
-    }
+    const Field = styled.div`
+        min-height: 44px;
+        min-width: 44px;
+        max-width: 500px;
+        width: 100%;
+        background-color: red;
+    `;
 
     return (
-        <div className="oui-input input">{input}</div>
+        <Field id={props.id} className={`oui-input ${props.classname} ${type}`}>{type}</Field>
     );
 }
 
