@@ -1,11 +1,8 @@
-import { TextField } from "@mui/material";
+import TextField from "@material-ui/core/TextField";
 import Styles from "../Input.module.css";
 
-/**
- * this is really basic with the intention to later make it oui based instead of mui based
- */
 export default function Text(props) {
-    return (
-        <TextField {...props} className={Styles.input} />
-    );
+  return (
+      <TextField variant="outlined" className={props.className + " " + Styles.input} {...props}/>
+  );
 }

@@ -1,9 +1,8 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import TextField from "@material-ui/core/TextField";
 import axios from 'axios';
 
 export default function Menu(props) {
@@ -25,7 +24,6 @@ export default function Menu(props) {
                     setContent(props.content);
                 }
             }
-
         
         if (link) {
             link = (props.supported) ? link.replace(".json", ".supported.json") : link;
@@ -45,19 +43,13 @@ export default function Menu(props) {
     }, []);
 
     return (
-        <Box>
-            <FormControl fullWidth>
-                <InputLabel>{props.label}</InputLabel>
-                    <Select
-                        labelId={props.id + "-label"}
-                        id={props.id}
-                        {...props}
-                    >
-                    {content.map((item, index) => {
-                        return <MenuItem key={index} value={item}>{item}</MenuItem>;
-                    })}
-                </Select>
-            </FormControl>
-        </Box>
+        <FormControl fullWidth>
+            <InputLabel>{props.label}</InputLabel>
+            <TextField variant='outlined' select {...props} >
+                {content.map((item, index) => {
+                    return <MenuItem key={index} value={item}>{item}</MenuItem>;
+                })}
+            </TextField>
+        </FormControl>
     );
 }
