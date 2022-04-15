@@ -1,5 +1,8 @@
 import React from "react"
 import styled from 'styled-components';
+
+import colorPipe from "../functions/colorPipe";
+
 import { minHeight, minWidth, onHover } from "../styles/clickable";
 import {pale, primaryDark} from "../styles/colors";
 import {radiusDefault} from "../styles/radius";
@@ -15,6 +18,7 @@ function SelectionButton({
     primaryTextColor="black",
     secondaryTextColor="white",
     radius=radiusDefault,
+    state,
 }) {
 
     const Button = styled.button`
@@ -23,7 +27,7 @@ function SelectionButton({
         min-height: ${minHeight};
         min-width: ${minWidth};
         width: 100%;
-        background-color: ${secondaryColor};
+        background-color: ${colorPipe(secondaryColor, "secondaryColor", state)};
         color: ${secondaryTextColor};
         width: 100%;
         border-radius: 0 ${radius} ${radius} 0;
@@ -37,7 +41,7 @@ function SelectionButton({
     `;
 
     const Selection = styled.div`
-        border: 1px solid ${secondaryColor};
+        border: 1px solid ${colorPipe(secondaryColor, "secondaryColor", state)};
         display: grid;
         align-items: center;
         grid-template-rows: auto;
