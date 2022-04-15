@@ -10,6 +10,14 @@ export const tertiaryLight = undefined
 export const tertiary = undefined;
 export const tertiaryDark = undefined;
 
+export const primaryError = "red";
+export const secondaryError = "red";
+export const tertiaryError = "red";
+
+export const primarySuccess = "green";
+export const secondarySuccess = "green";
+export const tertiarySuccess = "green";
+
 export const dark = "black";
 export const pale = "#D2D7D9";
 export const light = " white";

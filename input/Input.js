@@ -12,8 +12,8 @@ Input.defaultProps = {
     type: "text",
     primaryColor: primary,
     secondaryColor: primaryDark,
-    textColor: textDark,
-    textColorLight: textPale,
+    primaryTextColor: textDark,
+    secondaryTextColor: textPale,
     radius: radiusDefault,
 }
 
@@ -23,8 +23,8 @@ function Input(props) {
     const defaultColor = props.primaryColor;
     const hoverColor = props.secondaryColor;
     const focusColor = props.secondaryColor;
-    const textColor = props.textColor;
-    const textColorLight = props.textColorLight;
+    const textColor = props.primaryTextColor;
+    const textColorLight = props.secondaryTextColor;
 
     const styles = makeStyles({
         root: {

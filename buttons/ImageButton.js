@@ -1,6 +1,10 @@
 import React from "react";
 import styled from 'styled-components';
+
+import colorPipe from "../functions/colorPipe";
+
 import Image from "../images/Image";
+
 import {secondary, secondaryDark, textDark} from "../styles/colors";
 import { minHeight, minWidth, onHover } from "../styles/clickable";
 import { radiusRound } from "../styles/radius";
@@ -15,6 +19,7 @@ function ImageButton({
     secondaryColor=secondaryDark,
     textColor=textDark,
     radius=radiusRound,
+    state,
 }) {
     const [leftimg] = React.useState(
         (typeof left === "string") ? <Image src={left} width="44px" height="44px"/> : left
@@ -32,9 +37,9 @@ function ImageButton({
         min-width: ${minWidth};
         width:100%;
         border-radius: ${radius};
-        background-color: ${primaryColor};
+        background-color: ${colorPipe(primaryColor, "primaryColor", state)};
         color: ${textColor};
-        border: 1px solid ${secondaryColor};
+        border: 1px solid ${colorPipe(secondaryColor, "secondaryColor", state)};
         &:hover {
             ${onHover}
         }
