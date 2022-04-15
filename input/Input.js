@@ -1,12 +1,14 @@
 import React from "react";
-import { primary, primaryDark, textDark, textPale } from "../styles/colors";
 
+import colorPipe from "../functions/colorPipe";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Text from "./inputs/Text";
 import Date from "./inputs/Date";
 import Menu from "./inputs/Menu";
+
 import { radiusDefault } from "../styles/radius";
+import { primary, primaryDark, textDark, textPale } from "../styles/colors";
 
 Input.defaultProps = {
     type: "text",
@@ -20,11 +22,11 @@ Input.defaultProps = {
 function Input(props) {
     const [type, setType] = React.useState();
 
-    const defaultColor = props.primaryColor;
-    const hoverColor = props.secondaryColor;
-    const focusColor = props.secondaryColor;
-    const textColor = props.primaryTextColor;
-    const textColorLight = props.secondaryTextColor;
+    const defaultColor = colorPipe(props.primaryColor, "primaryColor", props.state);
+    const hoverColor = colorPipe(props.secondaryColor, "secondaryColor", props.state);
+    const focusColor = colorPipe(props.secondaryColor, "secondaryColor", props.state);
+    const textColor = colorPipe(props.primaryTextColor, "primaryTextColor", props.state);
+    const textColorLight = colorPipe(props.secondaryTextColor, "secondaryTextColor", props.state);
 
     const styles = makeStyles({
         root: {

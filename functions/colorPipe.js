@@ -1,31 +1,56 @@
-import {primaryError, secondaryError, tertiaryError, primarySuccess, secondarySuccess, tertiarySuccess} from "../styles/colors";
+import {
+    primaryError,
+    secondaryError,
+    tertiaryError,
+    primaryTextError,
+    secondaryTextError,
+    primarySuccess,
+    secondarySuccess,
+    tertiarySuccess,
+    primaryTextSuccess,
+    secondaryTextSuccess,
+} from "../styles/colors";
 
-const primary = "primaryColor";
-const secondary = "secondaryColor";
-const tertiary = "tertiaryColor";
+const types = {
+    primaryColor: "primaryColor",
+    secondaryColor: "secondaryColor",
+    tertiaryColor: "tertiaryColor",
+    primaryTextColor: "primaryTextColor",
+    secondaryTextColor: "secondaryTextColor"
+}
+
+const success = {
+    primaryColor: primarySuccess,
+    secondaryColor: secondarySuccess,
+    tertiaryColor: tertiarySuccess,
+    primaryTextColor: primaryTextSuccess,
+    secondaryTextColor: secondaryTextSuccess,
+}
+
+const error = { 
+    primaryColor: primaryError,
+    secondaryColor: secondaryError,
+    tertiaryColor: tertiaryError,
+    primaryTextColor: primaryTextError,
+    secondaryTextColor: secondaryTextError,
+}
+
+let colorSet = {
+    error: error,
+    success: success,
+};
 
 export default function colorPipe(color, colorType, state) {
 
-    if (colorType !== primary && colorType !== secondary && colorType !== tertiary) {
+    if (types[colorType] === undefined) {
         console.error("invalid color type: " + colorType);
     }
 
-    let colorSet = {};
-    switch(state) {
-        case "success":
-            colorSet[primary] = primarySuccess;
-            colorSet[secondary] = secondarySuccess;
-            colorSet[tertiary] = tertiarySuccess;
-            break;
-        case "error":
-            colorSet[primary] = primaryError;
-            colorSet[secondary] = secondaryError;
-            colorSet[tertiary] = tertiaryError;
-            break;
-        default:
-            colorSet[colorType] = color;
-            break;
-    }
+    let set = colorSet[state];
 
-    return colorSet[colorType];
+    if (set) {
+        return set[colorType];
+    } else {
+        return color;
+    }
 }

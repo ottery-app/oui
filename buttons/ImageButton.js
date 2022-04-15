@@ -17,7 +17,7 @@ function ImageButton({
     content,
     primaryColor=secondary,
     secondaryColor=secondaryDark,
-    textColor=textDark,
+    primaryTextColor=textDark,
     radius=radiusRound,
     state,
 }) {
@@ -38,7 +38,7 @@ function ImageButton({
         width:100%;
         border-radius: ${radius};
         background-color: ${colorPipe(primaryColor, "primaryColor", state)};
-        color: ${textColor};
+        color: ${primaryTextColor};
         border: 1px solid ${colorPipe(secondaryColor, "secondaryColor", state)};
         &:hover {
             ${onHover}
