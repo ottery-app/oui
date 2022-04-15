@@ -44,8 +44,12 @@ export default function Menu(props) {
 
     return (
         <FormControl fullWidth>
-            <InputLabel>{props.label}</InputLabel>
-            <TextField variant='outlined' select {...props} >
+            <TextField 
+                variant='outlined'
+                select
+                className={props.styles().root}
+                {...props}
+            >
                 {content.map((item, index) => {
                     return <MenuItem key={index} value={item}>{item}</MenuItem>;
                 })}

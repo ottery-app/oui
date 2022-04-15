@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import Image from "../images/Image";
-import {primary, tertiary, text} from "../styles/colors";
+import {primary, dark, textDark} from "../styles/colors";
 import { minHeight, minWidth, onHover } from "../styles/clickable";
 
 function ImageButton({
@@ -11,8 +11,8 @@ function ImageButton({
     right,
     content,
     primaryColor=primary,
-    secondaryColor=tertiary,
-    textColor=text,
+    secondaryColor=dark,
+    textColor=textDark,
     radius="50px"
 }) {
     const [leftimg] = React.useState(

@@ -1,9 +1,8 @@
 import React from "react";
 import styled from 'styled-components';
-import { secondary, secondaryDark } from "../styles/colors";
+import { secondary, secondaryDark, textDark, textPaleDark } from "../styles/colors";
 
-import { createTheme } from "@material-ui/core/styles";
-import { MuiThemeProvider } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 import Text from "./inputs/Text";
 import Date from "./inputs/Date";
@@ -13,88 +12,82 @@ Input.defaultProps = {
     type: "text",
     primaryColor: secondary,
     secondaryColor: secondaryDark,
+    textColor: textDark,
+    textColorLight: textPaleDark,
 }
 
 function Input(props) {
     const [type, setType] = React.useState();
-    const [theme, setTheme] = React.useState();
+
+    const defaultColor = props.primaryColor;
+    const hoverColor = props.secondaryColor;
+    const focusColor = props.secondaryColor;
+    const textColor = props.textColor;
+    const textColorLight = props.textColorLight;
+
+    const styles = makeStyles({
+        root: {
+            width: "100%",
+            "& .MuiOutlinedInput-input": {
+                color: textColor //this is the color of the text after it is filled and unfoucused
+            },
+            "& .MuiInputLabel-root": {
+                color: textColorLight //this is the label
+            },
+            "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                borderColor: defaultColor //this is the outline
+            },
+            "&:hover .MuiOutlinedInput-input": {
+                color: hoverColor //this is the filled text on hover
+            },
+            "&:hover .MuiInputLabel-root": {
+                color: hoverColor //this is the label on hover
+            },
+            "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                borderColor: hoverColor //this is the outline on hover
+            },
+            "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input": {
+                color: textColor //this is the text on filled foucused
+            },
+            "& .MuiInputLabel-root.Mui-focused": {
+                color: focusColor //this is the label when foucused
+            },
+            "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                borderColor: focusColor //this is the outline when foucused
+            }
+        }
+    });
     
     //This is used to set the type of field used
     React.useEffect(()=>{
+        //this is here to block a repeated class name of id in a lower level.
+        //The user should only be able to set a variable at the highest level
+        const {id, className, ...passedProps} = props;
+
         switch (props.type) {
             case "text":
             case "password":
-                setType(<Text {...props} />);
+                setType(<Text {...passedProps} styles={styles} />);
                 break;
             case "date":
-                setType(<Date {...props} />);
+                setType(<Date {...passedProps} styles={styles} />);
                 break;
             case "menu":
             case "states":
             case "countries":
-                setType(<Menu {...props} />);
+                setType(<Menu {...passedProps} styles={styles} />);
                 break;
             default:
                 throw new Error("Input type not supported");
         }
     },[]);
 
-    //This is used to set the colors of the mui field
-    React.useEffect(()=>{
-        const defaultColor = props.primaryColor;
-        const hoverColor = props.secondaryColor;
-        const focusColor = props.secondaryColor;
-
-
-        const theme1 = createTheme({
-            overrides: {
-              
-            }
-          });
-
-        setTheme(createTheme({
-            overrides: {
-                MuiOutlinedInput: {
-                    root: {
-                    "&:hover $notchedOutline": {
-                        borderColor: hoverColor
-                    },
-                    "&$focused $notchedOutline": {
-                        borderColor: focusColor
-                    },
-                    "& .MuiFormLabel-root": {
-                        color: "red"
-                    }
-                    },
-                    notchedOutline: {
-                        borderColor: defaultColor,
-                    }
-                },
-                MuiFormLabel: {
-                    root: {
-                        //color: hoverColor,
-                        "&$focused": {
-                            color: focusColor
-                        }
-                    },
-                    focused: {
-                        "&$focused": {
-                            color: focusColor
-                        }
-                    }
-                },
-            }
-        }));
-    },[])
-
     const Field = styled.div`
-        padding: 0px;
+        padding: 5px;
     `;
 
     return (
-        <MuiThemeProvider theme={theme}>
-            <Field id={props.id} className={"oui-input"}>{type}</Field>
-        </MuiThemeProvider>
+        <Field id={props.id} className={"oui-input " + props.className}>{type}</Field>
     );
 }
 
