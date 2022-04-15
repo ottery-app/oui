@@ -13,13 +13,13 @@ export const tertiaryDark = undefined;
 export const primaryError = "red";
 export const secondaryError = "red";
 export const tertiaryError = "red";
-export const primaryTextError = "red";
+export const primaryTextError = "black";
 export const secondaryTextError = "red";
 
 export const primarySuccess = "green";
 export const secondarySuccess = "green";
 export const tertiarySuccess = "green";
-export const primaryTextSuccess = "green";
+export const primaryTextSuccess = "black";
 export const secondaryTextSuccess = "green";
 
 export const dark = "black";
