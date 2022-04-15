@@ -1,19 +1,20 @@
 import React from "react";
-import styled from 'styled-components';
-import { secondary, secondaryDark, textDark, textPaleDark } from "../styles/colors";
+import { primary, primaryDark, textDark, textPale } from "../styles/colors";
 
 import { makeStyles } from "@material-ui/core/styles";
 
 import Text from "./inputs/Text";
 import Date from "./inputs/Date";
 import Menu from "./inputs/Menu";
+import { radiusDefault } from "../styles/radius";
 
 Input.defaultProps = {
     type: "text",
-    primaryColor: secondary,
-    secondaryColor: secondaryDark,
+    primaryColor: primary,
+    secondaryColor: primaryDark,
     textColor: textDark,
-    textColorLight: textPaleDark,
+    textColorLight: textPale,
+    radius: radiusDefault,
 }
 
 function Input(props) {
@@ -35,7 +36,8 @@ function Input(props) {
                 color: textColorLight //this is the label
             },
             "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-                borderColor: defaultColor //this is the outline
+                borderColor: defaultColor, //this is the outline
+                borderRadius: props.radius,
             },
             "&:hover .MuiOutlinedInput-input": {
                 color: hoverColor //this is the filled text on hover
@@ -82,12 +84,8 @@ function Input(props) {
         }
     },[]);
 
-    const Field = styled.div`
-        padding: 5px;
-    `;
-
     return (
-        <Field id={props.id} className={"oui-input " + props.className}>{type}</Field>
+        <div id={props.id} className={"oui-input " + props.className}>{type}</div>
     );
 }
 

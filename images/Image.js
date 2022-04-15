@@ -4,7 +4,7 @@ import dice from "./dice.svg";
 import check from "./check.svg";
 import alert from "./alert.svg";
 
-function Image({src, alt, width, height}) {
+function Image({src, alt, width, height, className, onClick}) {
     switch (src) {
         case "alert":
             src = alert;
@@ -30,7 +30,16 @@ function Image({src, alt, width, height}) {
             src = src;
     }
 
-    return <img className="oui-image" src={src} alt={alt} width={width} height={height} />;
+    return (
+        <img 
+            src={src} 
+            alt={alt} 
+            width={width} 
+            height={height}
+            onClick={onClick}
+            className={"oui-image " + className}
+        />
+    );
 }
 
 export default Image;

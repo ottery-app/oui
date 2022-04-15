@@ -1,8 +1,9 @@
 import React from "react";
 import styled from 'styled-components';
 import Image from "../images/Image";
-import {primary, dark, textDark} from "../styles/colors";
+import {secondary, secondaryDark, textDark} from "../styles/colors";
 import { minHeight, minWidth, onHover } from "../styles/clickable";
+import { radiusRound } from "../styles/radius";
 
 function ImageButton({
     id,
@@ -10,10 +11,10 @@ function ImageButton({
     left,
     right,
     content,
-    primaryColor=primary,
-    secondaryColor=dark,
+    primaryColor=secondary,
+    secondaryColor=secondaryDark,
     textColor=textDark,
-    radius="50px"
+    radius=radiusRound,
 }) {
     const [leftimg] = React.useState(
         (typeof left === "string") ? <Image src={left} width="44px" height="44px"/> : left
