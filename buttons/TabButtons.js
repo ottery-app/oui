@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import {onHover, minWidth, minHeight} from '../styles/clickable';
 import {secondaryLight, secondary, dark, textLight, textDark, secondaryDark} from "../styles/colors";
 
+import removeProps from "../functions/removeProps";
+import { tab } from "@testing-library/user-event/dist/tab";
+
 function generateAutos(length) {
     let auto = "";
     for (let i = 0; i < length; i++) {
@@ -69,11 +72,28 @@ export default function TabButtons({
     return (
         <Field id={id} className={"oui-field " + className} {...props}>
             {children.map((child, index)=>{
-                if (index === current) {
-                    return <Selected key={index} className="oui-tab-selected" {...props}>{child}</Selected>
-                } else {
-                    return <Tab key={index} className="oui-tab" onClick={()=>{setCurrent(index)}} {...props}>{child}</Tab>
-                }
+                const filteredChild = removeProps(child, ["onClick"]);
+                //This is a joke for my brother:
+                return (index === current) ? 
+                    <Selected 
+                        key={index}
+                        className="oui-tab-selected"
+                        {...props}
+                    >
+                        {filteredChild}
+                    </Selected>
+                    :
+                    <Tab
+                        key={index}
+                        className="oui-tab"
+                        onClick={()=>{
+                            setCurrent(index);
+                            child.props.onClick();
+                        }}
+                        {...props}
+                    >
+                        {filteredChild}
+                    </Tab>; 
             })}
         </Field>
     );

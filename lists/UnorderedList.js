@@ -63,8 +63,8 @@ export default function UnorderedList({
                 <Add><Button onClick={onClick}>&#43;</Button></Add>
             </Header>
             <List>
-                {children.map(element => {
-                    return <Item>{element}</Item>
+                {children.map((element, i) => {
+                    return <Item key={i}>{element}</Item>
                 })}
             </List>
         </Frame>
