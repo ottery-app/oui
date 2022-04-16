@@ -27,6 +27,7 @@ function Input(props) {
     const focusColor = colorPipe(props.secondaryColor, "secondaryColor", props.state);
     const textColor = colorPipe(props.primaryTextColor, "primaryTextColor", props.state);
     const textColorLight = colorPipe(props.secondaryTextColor, "secondaryTextColor", props.state);
+    const radius = props.radius;
 
     const styles = makeStyles({
         root: {
@@ -39,7 +40,7 @@ function Input(props) {
             },
             "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
                 borderColor: defaultColor, //this is the outline
-                borderRadius: props.radius,
+                borderRadius: radius,
             },
             "&:hover .MuiOutlinedInput-input": {
                 color: hoverColor //this is the filled text on hover

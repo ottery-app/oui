@@ -12,6 +12,39 @@ function generateAutos(length) {
     return auto;
 }
 
+const Tab = styled.button`
+    min-width: ${minWidth};
+    height: ${minHeight};
+    border: 1px solid ${props=>props.secondaryColor};
+    color: ${props=>props.primaryTextColor};    
+
+    background-color: ${props=>props.primaryColor};
+    &:hover {
+        ${onHover}
+    }
+`;
+
+const Selected = styled.button`
+    min-width: ${minWidth};
+    height: ${minHeight};
+    border: 1px solid ${props=>props.secondaryColor};
+    color: ${props=>props.primaryTextColor};
+
+    position: relative;
+    transform: scale(1.1);
+    z-index:1;
+    background-color: ${props=>props.secondaryColor};
+    color: ${props=>props.secondaryTextColor};
+`;
+
+const Field = styled.div`
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: ${props=>generateAutos(props.children.length)};
+    grid-template-rows: auto;
+`;
+
 export default function TabButtons({
     id,
     className,
@@ -23,45 +56,23 @@ export default function TabButtons({
 }) {
     const[current, setCurrent] = React.useState(0);
 
-    const button =`
-        min-width: ${minWidth};
-        height: ${minHeight};
-        border: 1px solid ${secondaryDark};
-        color: ${primaryTextColor};
-    `;
-
-    const Tab = styled.button`
-        ${button}
-        background-color: ${primaryColor};
-        &:hover {
-            ${onHover}
-        }
-    `;
-
-    const Selected = styled.button`
-        ${button}
-        position: relative;
-        transform: scale(1.1);
-        z-index:1;
-        background-color: ${secondaryColor};
-        color: ${secondaryTextColor};
-    `;
-
-    const Field = styled.div`
-        position: relative;
-        width: 100%;
-        display: grid;
-        grid-template-columns: ${generateAutos(children.length)};
-        grid-template-rows: auto;
-    `;
+    let props = {
+        id,
+        className,
+        primaryColor,
+        secondaryColor,
+        primaryTextColor,
+        secondaryTextColor,
+        children,
+    }
 
     return (
-        <Field id={id} className={"oui-field " + className}>
+        <Field id={id} className={"oui-field " + className} {...props}>
             {children.map((child, index)=>{
                 if (index === current) {
-                    return <Selected key={index} className="oui-tab-selected">{child}</Selected>
+                    return <Selected key={index} className="oui-tab-selected" {...props}>{child}</Selected>
                 } else {
-                    return <Tab key={index} className="oui-tab" onClick={()=>{setCurrent(index)}}>{child}</Tab>
+                    return <Tab key={index} className="oui-tab" onClick={()=>{setCurrent(index)}} {...props}>{child}</Tab>
                 }
             })}
         </Field>

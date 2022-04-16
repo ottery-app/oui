@@ -9,6 +9,26 @@ import {secondary, secondaryDark, textDark} from "../styles/colors";
 import { minHeight, minWidth, onHover } from "../styles/clickable";
 import { radiusRound } from "../styles/radius";
 
+const Button = styled.button`
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: center;
+    min-height: ${minHeight};
+    min-width: ${minWidth};
+    width:100%;
+    border-radius: ${props=>props.radius};
+    background-color: ${props => colorPipe(props.primaryColor, "primaryColor", props.state)};
+    color: ${props => props.primaryTextColor};
+    border: 2px solid ${props => colorPipe(props.secondaryColor, "secondaryColor", props.state)};
+    &:hover {
+        ${onHover}
+    }
+`;
+
+const Canvas = styled.div`
+    margin-top:2px;
+`;
+
 function ImageButton({
     id,
     className,
@@ -21,6 +41,18 @@ function ImageButton({
     radius=radiusRound,
     state,
 }) {
+    let props = {
+        id,
+        className,
+        left,
+        right,
+        content,
+        primaryColor,
+        secondaryColor,
+        primaryTextColor,
+        radius,
+        state,
+    }
 
     const [leftimg] = React.useState((()=>{
         let link = left;
@@ -38,28 +70,12 @@ function ImageButton({
         (typeof right === "string") ? <Image src={right} width="44px" height="44px"/> : right
     )
 
-    const Button = styled.button`
-        display: grid;
-        grid-template-columns: 44px auto 44px;
-        align-items: center;
-        min-height: ${minHeight};
-        min-width: ${minWidth};
-        width:100%;
-        border-radius: ${radius};
-        background-color: ${colorPipe(primaryColor, "primaryColor", state)};
-        color: ${primaryTextColor};
-        border: 2px solid ${colorPipe(secondaryColor, "secondaryColor", state)};
-        &:hover {
-            ${onHover}
-        }
-    `;
-
-    const Canvas = styled.div`
-        margin-top:2px;
-    `;
-
     return (
-        <Button id={id} className={"oui-image-button " + className}>
+        <Button 
+            id={id} 
+            className={"oui-image-button " + className}
+            {...props}
+        >
             <Canvas>{leftimg}</Canvas>
             <div>{content}</div>
             <Canvas>{rightimg}</Canvas>
