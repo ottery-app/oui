@@ -1,31 +1,38 @@
+//BLUE
 export const primaryLight = undefined;
 export const primary = "#89CFF0";
 export const primaryDark = "#71abc7";
 
+//BROWN
 export const secondaryLight = undefined;
 export const secondary = "#DFB87E";
 export const secondaryDark = "#b89767";
 
+//TBD
 export const tertiaryLight = undefined
 export const tertiary = undefined;
 export const tertiaryDark = undefined;
 
-export const primaryError = "red";
-export const secondaryError = "red";
-export const tertiaryError = "red";
+//ERROR
+export const primaryError = "#ff4d52";
+export const secondaryError = "#cf0000";
+export const tertiaryError = "#d6242a";
 export const primaryTextError = "black";
-export const secondaryTextError = "red";
+export const secondaryTextError = "#ff4d52";
 
-export const primarySuccess = "green";
-export const secondarySuccess = "green";
+//SUCCESS
+export const primarySuccess = "#3fbd3c";
+export const secondarySuccess = "#008200";
 export const tertiarySuccess = "green";
 export const primaryTextSuccess = "black";
-export const secondaryTextSuccess = "green";
+export const secondaryTextSuccess = "#3fbd3c";
 
+//COLORLESS
 export const dark = "black";
-export const pale = "#D2D7D9";
+export const pale = "#f0f0f0";
 export const light = " white";
 
+//TEXT
 export const textDark = "black";
-export const textPale = "#D2D7D9";
+export const textPale = "#afb2b3";
 export const textLight = "white";

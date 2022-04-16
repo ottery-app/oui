@@ -21,9 +21,18 @@ function ImageButton({
     radius=radiusRound,
     state,
 }) {
-    const [leftimg] = React.useState(
-        (typeof left === "string") ? <Image src={left} width="44px" height="44px"/> : left
-    )
+
+    const [leftimg] = React.useState((()=>{
+        let link = left;
+
+        if (state === "error") {
+            link = "alert";
+        } else if (state === "success") {
+            link = "check";
+        }
+
+        return (typeof link === "string") ? <Image src={link} width="44px" height="44px"/> : link
+    })());
 
     const [rightimg] = React.useState(
         (typeof right === "string") ? <Image src={right} width="44px" height="44px"/> : right
@@ -39,7 +48,7 @@ function ImageButton({
         border-radius: ${radius};
         background-color: ${colorPipe(primaryColor, "primaryColor", state)};
         color: ${primaryTextColor};
-        border: 1px solid ${colorPipe(secondaryColor, "secondaryColor", state)};
+        border: 2px solid ${colorPipe(secondaryColor, "secondaryColor", state)};
         &:hover {
             ${onHover}
         }
