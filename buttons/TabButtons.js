@@ -2,7 +2,6 @@ import React from "react";
 import styled from 'styled-components';
 
 import {onHover, minWidth, minHeight} from '../styles/clickable';
-import { radiusDefault } from "../styles/radius";
 import {secondaryLight, secondary, dark, textLight, textDark, secondaryDark} from "../styles/colors";
 
 function generateAutos(length) {
@@ -25,7 +24,6 @@ export default function TabButtons({
     const[current, setCurrent] = React.useState(0);
 
     const button =`
-        border: 0px solid white;
         min-width: ${minWidth};
         height: ${minHeight};
         border: 1px solid ${secondaryDark};

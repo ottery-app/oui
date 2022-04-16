@@ -3,6 +3,8 @@ import ImageButton from "./buttons/ImageButton";
 import SelectionButton from "./buttons/SelectionButton";
 import TabButtons from "./buttons/TabButtons";
 import Image from "./images/Image";
+import UnorderedList from "./lists/UnorderedList";
+import OrderedList from "./lists/OrderedList";
 
 export{
     Input,
@@ -10,4 +12,6 @@ export{
     Image,
     SelectionButton,
     TabButtons,
+    UnorderedList,
+    OrderedList,
 }
