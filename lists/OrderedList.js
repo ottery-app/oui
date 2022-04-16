@@ -4,7 +4,7 @@ export default function OrderedList({
     id,
     className,
     title,
-    onAdd,
+    onClick,
     primaryColor,
     secondaryColor,
     primaryTextColor,
@@ -16,7 +16,7 @@ export default function OrderedList({
             id={id}
             className={className}
             title={title}
-            onAdd={onAdd}
+            onClick={onClick}
             primaryColor={primaryColor}
             secondaryColor={secondaryColor}
             primaryTextColor={primaryTextColor}
