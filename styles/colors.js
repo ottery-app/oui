@@ -17,14 +17,14 @@ export const tertiaryDark = undefined;
 export const primaryError = "#ff4d52";
 export const secondaryError = "#cf0000";
 export const tertiaryError = "#d6242a";
-export const primaryTextError = "black";
+export const primaryTextError = "white";
 export const secondaryTextError = "#ff4d52";
 
 //SUCCESS
 export const primarySuccess = "#3fbd3c";
 export const secondarySuccess = "#008200";
 export const tertiarySuccess = "green";
-export const primaryTextSuccess = "black";
+export const primaryTextSuccess = "white";
 export const secondaryTextSuccess = "#3fbd3c";
 
 //COLORLESS

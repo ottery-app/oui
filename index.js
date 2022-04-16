@@ -5,6 +5,7 @@ import TabButtons from "./buttons/TabButtons";
 import Image from "./images/Image";
 import UnorderedList from "./lists/UnorderedList";
 import OrderedList from "./lists/OrderedList";
+import Button from "./buttons/Button";
 
 export{
     Input,
@@ -14,4 +15,5 @@ export{
     TabButtons,
     UnorderedList,
     OrderedList,
+    Button,
 }

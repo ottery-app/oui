@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import colorPipe from "../functions/colorPipe";
 
 import { minHeight, minWidth, onHover } from "../styles/clickable";
-import {pale, primaryDark} from "../styles/colors";
+import {pale, primary} from "../styles/colors";
 import {radiusDefault} from "../styles/radius";
 
 const Button = styled.button`
@@ -43,7 +43,7 @@ function SelectionButton({
     onClick,
     className,
     primaryColor=pale,
-    secondaryColor=primaryDark,
+    secondaryColor=primary,
     primaryTextColor="black",
     secondaryTextColor="white",
     radius=radiusDefault,
