@@ -67,7 +67,16 @@ function Input(props) {
     React.useEffect(()=>{
         //this is here to block a repeated class name of id in a lower level.
         //The user should only be able to set a variable at the highest level
-        const {id, className, ...passedProps} = props;
+        const { 
+            id,
+            className,
+            primaryColor,
+            secondaryColor,
+            primaryTextColor,
+            secondaryTextColor,
+            radius,
+            ...passedProps
+        } = props;
 
         switch (props.type) {
             case "text":
