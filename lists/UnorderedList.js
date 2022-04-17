@@ -3,11 +3,15 @@ import styled from 'styled-components';
 
 import {minHeight} from "../styles/clickable";
 import {textDark, pale} from '../styles/colors';
+import {radiusDefault} from "../styles/radius";
 
 import AddButton from "../buttons/AddButton";
 
 const Frame = styled.div`
     background-color:${props=>props.primaryColor};
+    padding:5px;
+    border:${props=>`2px solid ${props.secondaryColor}`};
+    border-radius:${props=>props.radius};
 `;
 
 const Header = styled.div`
@@ -17,10 +21,6 @@ const Header = styled.div`
     padding: 0 10px;
     align-items: center;
     min-height: ${minHeight};
-`;
-
-const List = styled.div`
-    margin:10px;
 `;
 
 const Item = styled.div`
@@ -45,19 +45,28 @@ export default function UnorderedList({
     onClick,
     children,
     primaryColor=pale,
+    secondaryColor=pale,
     primaryTextColor=textDark,
+    radius=radiusDefault,
 }) {
+    let props = {
+        primaryColor,
+        secondaryColor,
+        primaryTextColor,
+        radius,
+    }
+
     return(
-        <Frame id={id} className={`oui-list ${className}`} primaryColor={primaryColor}>
+        <Frame id={id} className={`oui-list ${className}`} {...props}>
             <Header>
-                <Title primaryTextColor={primaryTextColor} >{title}</Title>
+                <Title {...props}>{title}</Title>
                 <Add><AddButton onClick={onClick} type="text" primaryColor={primaryTextColor} /></Add>
             </Header>
-            <List>
+            <div>
                 {children.map((element, i) => {
                     return <Item key={i}>{element}</Item>
                 })}
-            </List>
+            </div>
         </Frame>
     );
 }
