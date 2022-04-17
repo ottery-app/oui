@@ -1,14 +1,16 @@
 import React from "react";
 import styled from 'styled-components';
 
-import {minHeight, minWidth, onHover} from "../styles/clickable";
+import {minHeight} from "../styles/clickable";
+import {textDark, pale} from '../styles/colors';
+
+import AddButton from "../buttons/AddButton";
 
 const Frame = styled.div`
-    background-color:green;
+    background-color:${props=>props.primaryColor};
 `;
 
 const Header = styled.div`
-    background-color:yellow;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto auto;
@@ -18,34 +20,22 @@ const Header = styled.div`
 `;
 
 const List = styled.div`
-    background-color:red;
-    padding: 10px;
-    font-size: 1.4em;
+    margin:10px;
 `;
 
 const Item = styled.div`
     margin: 5px;
 `;
 
-const Title = styled.h3`
-    text-align: left;
+const Title = styled.div`
+    color: ${props=>props.primaryTextColor};
     font-weight: normal;
-    padding: 0;
+    text-align:left;
+    padding: 0px 10px;
 `;
 
 const Add = styled.span`
     text-align:right;
-`;
-
-const Button = styled.button`
-    border: 0;
-    background: inherit;
-    font-size: 1.5em;
-    min-width: ${minWidth};
-    min-height: ${minHeight};
-    &:hover{
-        ${onHover}
-    }
 `;
 
 export default function UnorderedList({
@@ -54,13 +44,14 @@ export default function UnorderedList({
     title = "items: ",
     onClick,
     children,
+    primaryColor=pale,
+    primaryTextColor=textDark,
 }) {
-
     return(
-        <Frame className={`oui-list ${className}`}>
+        <Frame id={id} className={`oui-list ${className}`} primaryColor={primaryColor}>
             <Header>
-                <Title>{title}</Title>
-                <Add><Button onClick={onClick}>&#43;</Button></Add>
+                <Title primaryTextColor={primaryTextColor} >{title}</Title>
+                <Add><AddButton onClick={onClick} type="text" primaryColor={primaryTextColor} /></Add>
             </Header>
             <List>
                 {children.map((element, i) => {

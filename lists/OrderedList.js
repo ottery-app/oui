@@ -11,6 +11,7 @@ export default function OrderedList({
     children,
     sort,
 }) {
+    console.log("as of now the ordered list does not sort");
     return(
         <UnorderedList
             id={id}

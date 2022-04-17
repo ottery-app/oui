@@ -68,6 +68,8 @@ export default function Button({
         onClick,
     }
 
+    console.log(`${props.border} solid ${props.secondaryColor}`);
+
     return (
         <Butt {...props} />
     );
