@@ -6,7 +6,7 @@ import { primary, textLight, } from "../styles/colors";
 import { minHeight, minWidth, maxWidth, onHover } from "../styles/clickable"
 
 const Butt = styled.button`
-    border: 2px solid ${props=>props.secondaryColor};
+    border: ${props=>`${props.border} solid ${props.secondaryColor}`};
     background-color: ${props=>props.primaryColor};
     color: ${props=>props.primaryTextColor};
     border-radius: ${props=>props.radius};
@@ -29,22 +29,43 @@ export default function Button({
     secondaryColor=primary,
     primaryTextColor=textLight,
     radius=radiusDefault,
-    type="filled", //outline
+    type="filled", //outline/text
     children,
     width,
     height,
+    onClick,
 }) {
+    let colors = {
+        primary: primaryColor,
+        secondary: secondaryColor,
+        text: primaryTextColor,
+        border: "2px",
+    }
+
+    if (type==="outline") {
+        colors.primary = "inherit";
+        colors.secondary = primaryColor;
+        colors.text = primaryColor;
+    } else if (type==="text") {
+        colors.primary = "inherit";
+        colors.secondary = primaryColor;
+        colors.text = primaryColor;
+        colors.border = "0px";
+    }
+
     const props = {
         id,
-        className,
-        primaryColor: (type === "outline") ? "inherit" : primaryColor,
-        secondaryColor: (type === "outline") ? primaryColor : secondaryColor,
-        primaryTextColor: (type === "outline") ? primaryColor : primaryTextColor,
+        className: className + " oui-button",
+        primaryColor: colors.primary,
+        secondaryColor: colors.secondary,
+        primaryTextColor: colors.text,
         radius,
         type,
         children,
         width,
         height,
+        border: colors.border,
+        onClick,
     }
 
     return (

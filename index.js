@@ -6,6 +6,7 @@ import Image from "./images/Image";
 import UnorderedList from "./lists/UnorderedList";
 import OrderedList from "./lists/OrderedList";
 import Button from "./buttons/Button";
+import AddButton from "./buttons/AddButton";
 
 export{
     Input,
@@ -16,4 +17,5 @@ export{
     UnorderedList,
     OrderedList,
     Button,
+    AddButton,
 }
