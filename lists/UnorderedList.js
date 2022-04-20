@@ -18,7 +18,6 @@ const Header = styled.div`
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto auto;
-    padding: 0 10px;
     align-items: center;
     min-height: ${minHeight};
 `;
@@ -29,9 +28,9 @@ const Item = styled.div`
 
 const Title = styled.div`
     color: ${props=>props.primaryTextColor};
-    font-weight: normal;
     text-align:left;
-    padding: 0px 10px;
+    padding: 0px 20px;
+    text-transform: capitalize;
 `;
 
 const Add = styled.span`
@@ -41,7 +40,7 @@ const Add = styled.span`
 export default function UnorderedList({
     id,
     className,
-    title = "items: ",
+    title = "items",
     onClick,
     children,
     primaryColor=pale,

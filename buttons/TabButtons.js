@@ -1,11 +1,11 @@
 import React from "react";
 import styled from 'styled-components';
 
+import {radiusDefault} from "../styles/radius";
 import {onHover, minWidth, minHeight} from '../styles/clickable';
-import {secondaryLight, secondary, dark, textLight, textDark, secondaryDark} from "../styles/colors";
+import {secondaryLight, textDark, secondaryDark} from "../styles/colors";
 
 import removeProps from "../functions/removeProps";
-import { tab } from "@testing-library/user-event/dist/tab";
 
 function generateAutos(length) {
     let auto = "";
@@ -18,10 +18,11 @@ function generateAutos(length) {
 const Tab = styled.button`
     min-width: ${minWidth};
     height: ${minHeight};
-    border: 1px solid ${props=>props.secondaryColor};
+    border: 0px solid ${props=>props.secondaryColor};
     color: ${props=>props.primaryTextColor};    
 
-    background-color: ${props=>props.primaryColor};
+    border-bottom: 3px solid ${props=>props.primaryColor};
+    background-color: inherit;
     &:hover {
         ${onHover}
     }
@@ -32,8 +33,10 @@ const Selected = styled.button`
     height: ${minHeight};
     border: 1px solid ${props=>props.secondaryColor};
     color: ${props=>props.primaryTextColor};
+    border-radius: ${radiusDefault} ${radiusDefault} 0 0;
 
     position: relative;
+    top: -2px;
     transform: scale(1.1);
     z-index:1;
     background-color: ${props=>props.secondaryColor};
