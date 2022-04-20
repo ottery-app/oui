@@ -60,7 +60,7 @@ export default function UnorderedList({
         <Frame id={id} className={`oui-list ${className}`} {...props}>
             <Header>
                 <Title {...props}>{title}</Title>
-                <Add><AddButton onClick={onClick} type="text" primaryColor={primaryTextColor} /></Add>
+                {(onClick)?<Add><AddButton onClick={onClick} type="text" primaryColor={primaryTextColor} /></Add>:undefined}
             </Header>
             <div>
                 {children.map((element, i) => {

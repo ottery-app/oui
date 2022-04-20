@@ -30,9 +30,9 @@ export const secondaryTextSuccess = "#3fbd3c";
 //COLORLESS
 export const dark = "black";
 export const pale = "#f0f0f0";
-export const light = " white";
+export const light = "white";
 
 //TEXT
 export const textDark = "black";
-export const textPale = "#afb2b3";
+export const textPale = "#d4d4d4";
 export const textLight = "white";

@@ -7,6 +7,8 @@ import UnorderedList from "./lists/UnorderedList";
 import OrderedList from "./lists/OrderedList";
 import Button from "./buttons/Button";
 import AddButton from "./buttons/AddButton";
+import StepBar from "./progressBars/StepBar";
+import IconButton from "./buttons/IconButton";
 
 export{
     Input,
@@ -18,4 +20,6 @@ export{
     OrderedList,
     Button,
     AddButton,
+    StepBar,
+    IconButton,
 }
