@@ -10,26 +10,42 @@ import Menu from "./inputs/Menu";
 import { radiusDefault } from "../styles/radius";
 import { primary, primaryDark, textDark, textPale } from "../styles/colors";
 
-Input.defaultProps = {
-    type: "text",
-    primaryColor: primary,
-    secondaryColor: primaryDark,
-    primaryTextColor: textDark,
-    secondaryTextColor: textPale,
-    radius: radiusDefault,
-}
+function Input({
+    type = "text",
+    primaryColor = primary,
+    secondaryColor = primaryDark,
+    primaryTextColor = textDark,
+    secondaryTextColor = textPale,
+    radius = radiusDefault,
+    state="default",
+    className,
+    id,
+    value,
+    label,
+    onChange,
+    fields, //this is for the menu
+    link,
+    supported,
+}) {
+    const [content, setContent] = React.useState();
 
-function Input(props) {
-    const [type, setType] = React.useState();
+    const props = {
+        type,
+        value,
+        label,
+        onChange,
+        fields,
+        link,
+        supported
+    };
 
-    const defaultColor = colorPipe(props.primaryColor, "primaryColor", props.state);
-    const hoverColor = colorPipe(props.secondaryColor, "secondaryColor", props.state);
-    const focusColor = colorPipe(props.secondaryColor, "secondaryColor", props.state);
-    const textColor = colorPipe(props.primaryTextColor, "primaryTextColor", props.state);
-    const textColorLight = colorPipe(props.secondaryTextColor, "secondaryTextColor", props.state);
-    const radius = props.radius;
+    const defaultColor = colorPipe(primaryColor, "primaryColor", state);
+    const hoverColor = colorPipe(secondaryColor, "secondaryColor", state);
+    const focusColor = colorPipe(secondaryColor, "secondaryColor", state);
+    const textColor = colorPipe(primaryTextColor, "primaryTextColor", state);
+    const textColorLight = colorPipe(secondaryTextColor, "secondaryTextColor", state);
 
-    const styles = makeStyles({
+    const colors = makeStyles({
         root: {
             width: "100%",
             "& .MuiOutlinedInput-input": {
@@ -67,29 +83,20 @@ function Input(props) {
     React.useEffect(()=>{
         //this is here to block a repeated class name of id in a lower level.
         //The user should only be able to set a variable at the highest level
-        const { 
-            id,
-            className,
-            primaryColor,
-            secondaryColor,
-            primaryTextColor,
-            secondaryTextColor,
-            radius,
-            ...passedProps
-        } = props;
+        
 
-        switch (props.type) {
+        switch (type) {
             case "text":
             case "password":
-                setType(<Text {...passedProps} styles={styles} />);
+                setContent(<Text {...props} colors={colors} />);
                 break;
             case "date":
-                setType(<Date {...passedProps} styles={styles} />);
+                setContent(<Date {...props} colors={colors} />);
                 break;
             case "menu":
             case "states":
             case "countries":
-                setType(<Menu {...passedProps} styles={styles} />);
+                setContent(<Menu {...props} colors={colors} />);
                 break;
             default:
                 throw new Error("Input type not supported");
@@ -97,7 +104,7 @@ function Input(props) {
     },[]);
 
     return (
-        <div id={props.id} className={"oui-input " + props.className}>{type}</div>
+        <div id={id} className={"oui-input " + className}>{content}</div>
     );
 }
 

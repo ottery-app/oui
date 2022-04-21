@@ -1,13 +1,20 @@
 import TextField from "@material-ui/core/TextField";
 
-function Date(props) {
+function Date({
+    value,
+    label,
+    onChange,
+    colors,
+}) {
     return (
         <TextField 
             variant="outlined"
             type="date"
             InputLabelProps={{shrink: true }}
-            className={props.styles().root}
-            {...props}
+            className={colors().root}
+            value={value}
+            label={label}
+            onChange={onChange}
         />
     );
 }
