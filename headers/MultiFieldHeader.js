@@ -23,11 +23,10 @@ const Header = styled.div`
 const Grid = styled.div`
     display: grid;
     width: 100%;
-    grid-template-columns: auto ${minWidth};
+    grid-template-columns: auto ${(+minHeight.replace("px", "") + 25) + "px"};
     grid-template-rows: ${minHeight} auto;
     align-items: center;
     margin-top: 15px;
-    margin-right: 15px;
 `;
 
 const Info = styled.div`
@@ -51,7 +50,6 @@ const Tab = styled.div`
 const Edit = styled.div`
     grid-column: 2;
     grid-row: 1;
-    margin-top: 5px;
 `;
 
 export default function MultiFieldHeader({
