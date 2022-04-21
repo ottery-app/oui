@@ -33,6 +33,8 @@ import styled from "styled-components";
 import { onHover, minHeight } from "../styles/clickable";
 import { textPale, textDark } from "../styles/colors";
 
+import addPx from "../functions/addPx";
+
 const icons = {
     back: AiOutlineLeft,
     forward: AiOutlineRight,
@@ -51,9 +53,9 @@ const icons = {
 }
 
 const Icon = styled.span`
-    max-width: ${props=>props.fontSize};
-    font-size: ${props=>props.fontSize};
-    color: ${props=>props.color};
+    max-width: ${props=>addPx(props.fontSize, -8)};
+    font-size: ${props=>addPx(props.fontSize, -8)};
+    color: ${props=>props.primaryTextColor};
     &:hover {
         ${onHover}
         color: ${props=>props.secondaryTextColor};
