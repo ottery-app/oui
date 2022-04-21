@@ -5,9 +5,11 @@ import IconButton from "../buttons/IconButton";
 import Image from "../images/Image";
 
 import {mediumProfile} from "../styles/image.js";
-import {minHeight, minWidth} from "../styles/clickable.js";
-import {pale, secondaryDark, secondary} from "../styles/colors.js";
+import {minHeight} from "../styles/clickable.js";
+import {pale} from "../styles/colors.js";
 import { radiusDefault } from "../styles/radius";
+
+import addPx from "../functions/addPx";
 
 const Header = styled.div`
     display: flex;
@@ -23,7 +25,7 @@ const Header = styled.div`
 const Grid = styled.div`
     display: grid;
     width: 100%;
-    grid-template-columns: auto ${(+minHeight.replace("px", "") + 25) + "px"};
+    grid-template-columns: auto ${addPx(minHeight, 25)};
     grid-template-rows: ${minHeight} auto;
     align-items: center;
     margin-top: 15px;
@@ -97,7 +99,7 @@ export default function MultiFieldHeader({
                 <Tab editable={props.editable}>
                     <TabButtons {...props}>
                         {children.map((child)=>{
-                            return <span onClick={()=>{onTab(child.key)}}>{child.key}</span>
+                            return <span key={child.key} onClick={()=>{onTab(child.key)}}>{child.key}</span>
                         })}
                     </TabButtons>
                 </Tab>

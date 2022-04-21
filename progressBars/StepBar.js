@@ -55,9 +55,9 @@ export default function StepBar({
             <Bar primaryColor={primaryColor} />
             {Array.from(Array(numFields).keys()).map((num)=>{
                 if (num === current - 1) {
-                    return <Field val={num+1} status="current" {...props} />;
+                    return <Field key={num+1} val={num+1} status="current" {...props} />;
                 } else {
-                    return <Field val={num+1} {...props} />;
+                    return <Field key={num+1} val={num+1} {...props} />;
                 }
             })}
         </Progress>
