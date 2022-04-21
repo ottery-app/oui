@@ -9,6 +9,7 @@ import Button from "./buttons/Button";
 import AddButton from "./buttons/AddButton";
 import StepBar from "./progressBars/StepBar";
 import IconButton from "./buttons/IconButton";
+import MultiFieldHeader from "./headers/MultiFieldHeader";
 
 export{
     Input,
@@ -22,4 +23,5 @@ export{
     AddButton,
     StepBar,
     IconButton,
+    MultiFieldHeader,
 }

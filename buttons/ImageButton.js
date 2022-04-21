@@ -8,6 +8,7 @@ import Image from "../images/Image";
 import {secondary, secondaryDark, textDark} from "../styles/colors";
 import { minHeight, minWidth, onHover } from "../styles/clickable";
 import { radiusRound } from "../styles/radius";
+import { smallProfile } from "../styles/image";
 
 const Button = styled.button`
     display: grid;
@@ -63,11 +64,11 @@ function ImageButton({
             link = "check";
         }
 
-        return (typeof link === "string") ? <Image src={link} width="44px" height="44px"/> : link
+        return (typeof link === "string") ? <Image src={link} alt={left} width={smallProfile} height={smallProfile}/> : link
     })());
 
     const [rightimg] = React.useState(
-        (typeof right === "string") ? <Image src={right} width="44px" height="44px"/> : right
+        (typeof right === "string") ? <Image src={right} alt={right} width={smallProfile} height={smallProfile}/> : right
     )
 
     return (

@@ -91,7 +91,9 @@ export default function TabButtons({
                         className="oui-tab"
                         onClick={()=>{
                             setCurrent(index);
-                            child.props.onClick();
+                            if (child.props.onClick) {
+                                child.props.onClick();
+                            }
                         }}
                         {...props}
                     >
