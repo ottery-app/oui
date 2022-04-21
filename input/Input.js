@@ -78,13 +78,9 @@ function Input({
             }
         }
     });
-    
-    //This is used to set the type of field used
-    React.useEffect(()=>{
+
         //this is here to block a repeated class name of id in a lower level.
         //The user should only be able to set a variable at the highest level
-        
-
         switch (type) {
             case "text":
             case "password":
@@ -101,7 +97,6 @@ function Input({
             default:
                 throw new Error("Input type not supported");
         }
-    },[]);
 
     return (
         <div id={id} className={"oui-input " + className}>{content}</div>
