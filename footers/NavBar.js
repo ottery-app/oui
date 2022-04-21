@@ -28,7 +28,6 @@ export default function NavBar({
     className,
     children,
 }) {
-    console.log(children)
     return (
         <Nav id={id} className={"oui-nav-footer " + className}>
             {((children && children.length) ? children.map(child => {

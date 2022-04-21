@@ -56,6 +56,7 @@ const Icon = styled.span`
     max-width: ${props=>addPx(props.fontSize, -8)};
     font-size: ${props=>addPx(props.fontSize, -8)};
     color: ${props=>props.primaryTextColor};
+    padding-top: 10px;
     &:hover {
         ${onHover}
         color: ${props=>props.secondaryTextColor};

@@ -30,6 +30,18 @@ function Image({src, alt, width, height, className, onClick}) {
             src = src;
     }
 
+    if (alt === undefined) {
+        console.warn("oui: Image should always have a alt field");
+    }
+
+    if (width === undefined) {
+        console.warn("oui: Image should always have a width field");
+    }
+
+    if (height === undefined) {
+        console.warn("oui: Image should always have a height field");
+    }
+
     return (
         <img 
             src={src} 

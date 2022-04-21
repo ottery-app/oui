@@ -94,7 +94,7 @@ export default function MultiFieldHeader({
                     {title}
                 </Info>
                 <Edit>
-                    {(onEdit)?<IconButton icon="edit" onClick={onTab}/>:undefined}
+                    {(onEdit)?<IconButton icon="edit" onClick={onEdit}/>:undefined}
                 </Edit>
                 <Tab editable={props.editable}>
                     <TabButtons {...props}>

@@ -11,6 +11,7 @@ import StepBar from "./progressBars/StepBar";
 import IconButton from "./buttons/IconButton";
 import MultiFieldHeader from "./headers/MultiFieldHeader";
 import NavBar from "./footers/NavBar";
+import MainHeader from "./headers/MainHeader";
 
 export{
     Input,
@@ -26,4 +27,5 @@ export{
     IconButton,
     MultiFieldHeader,
     NavBar,
+    MainHeader,
 }
