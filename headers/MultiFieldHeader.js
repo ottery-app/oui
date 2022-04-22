@@ -6,7 +6,7 @@ import Image from "../images/Image";
 
 import {mediumProfile} from "../styles/image.js";
 import {minHeight} from "../styles/clickable.js";
-import {pale} from "../styles/colors.js";
+import {tertiary} from "../styles/colors.js";
 import { radiusDefault } from "../styles/radius";
 
 import addPx from "../functions/addPx";
@@ -64,7 +64,7 @@ export default function MultiFieldHeader({
     onEdit,
     primaryColor,
     secondaryColor,
-    tertiaryColor=pale,
+    tertiaryColor=tertiary,
     radius=radiusDefault,
 }) {
     const props = {

@@ -17,24 +17,23 @@ export default function Menu({
     const [fieldContent, setFieldContent] = React.useState([]);
 
     React.useEffect(() => {
-        let address = link;
         switch (type) {
             case "countries":
-                address = "https://raw.githubusercontent.com/ottery-app/global-data/main/geographic/countries.json";
+                link = "https://raw.githubusercontent.com/ottery-app/global-data/main/geographic/countries.json";
                 break;
             case "states":
-                address = 'https://raw.githubusercontent.com/ottery-app/global-data/main/geographic/US/states.json';
+                link = 'https://raw.githubusercontent.com/ottery-app/global-data/main/geographic/US/states.json';
                 break;
             default:
-                if (address === undefined) {
+                if (link === undefined) {
                     setFieldContent(fields);
                 }
             }
         
-        if (address) {
-            address = (supported) ? address.replace(".json", ".supported.json") : address;
+        if (link) {
+            link = (supported) ? link.replace(".json", ".supported.json") : link;
 
-            axios.get(address)
+            axios.get(link)
             .then (response => {
                 if (typeof response.data === "string") {
                     response.data = JSON.parse(response.data);
@@ -46,14 +45,14 @@ export default function Menu({
                 console.error("something went wrong. 1. check that the link you provided was correct. 2. the link should be to a json array with this format: [{\"name\":\"val\"}]", error);
             });
         }
-    }, [link, type, supported, fields]);
+    }, []);
 
     return (
         <FormControl fullWidth>
             <TextField 
                 variant='outlined'
                 select
-                className={colors().root}
+                className={(colors) ? colors().root:undefined}
                 label={label}
                 value={(value === undefined) ? "" : value}
                 onChange={onChange}

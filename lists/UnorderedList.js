@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 
 import {minHeight} from "../styles/clickable";
-import {textDark, pale} from '../styles/colors';
+import {textDark, tertiary} from '../styles/colors';
 import {radiusDefault} from "../styles/radius";
 
 import AddButton from "../buttons/AddButton";
@@ -43,8 +43,8 @@ export default function UnorderedList({
     title = "items",
     onClick,
     children,
-    primaryColor=pale,
-    secondaryColor=pale,
+    primaryColor=tertiary,
+    secondaryColor=tertiary,
     primaryTextColor=textDark,
     radius=radiusDefault,
 }) {

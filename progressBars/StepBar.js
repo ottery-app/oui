@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { onHover } from "../styles/clickable";
 
-import {primary, pale, textPale, textDark} from '../styles/colors';
+import {primary, tertiary, textPale, textDark} from '../styles/colors';
 
 const Circle = styled.div`
     border: 3px solid ${props => props.status !== 'current' ? props.primaryColor : props.secondaryColor};
@@ -36,7 +36,7 @@ const Progress = styled.div`
 export default function StepBar({
     numFields,
     current,
-    primaryColor=pale,
+    primaryColor=tertiary,
     secondaryColor=primary,
     primaryTextColor=textPale,
     secondaryTextColor=textDark,

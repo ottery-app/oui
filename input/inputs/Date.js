@@ -1,3 +1,4 @@
+import React from "react";
 import TextField from "@material-ui/core/TextField";
 
 function Date({
@@ -6,12 +7,14 @@ function Date({
     onChange,
     colors,
 }) {
+    const [col, setCol] = React.useState((colors) ? colors().root : undefined);
+
     return (
         <TextField 
             variant="outlined"
             type="date"
             InputLabelProps={{shrink: true }}
-            className={colors().root}
+            className={col}
             value={value}
             label={label}
             onChange={onChange}

@@ -10,7 +10,7 @@ export const secondaryDark = "#b89767";
 
 //TBD
 export const tertiaryLight = undefined
-export const tertiary = undefined;
+export const tertiary = "#f0f0f0";
 export const tertiaryDark = undefined;
 
 //ERROR
@@ -26,11 +26,6 @@ export const secondarySuccess = "#008200";
 export const tertiarySuccess = "green";
 export const primaryTextSuccess = "black";
 export const secondaryTextSuccess = "#3fbd3c";
-
-//COLORLESS
-export const dark = "black";
-export const pale = "#f0f0f0";
-export const light = "white";
 
 //TEXT
 export const textDark = "black";

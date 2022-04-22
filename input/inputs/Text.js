@@ -1,3 +1,4 @@
+import React from "react";
 import TextField from "@material-ui/core/TextField";
 
 export default function Text({
@@ -11,7 +12,7 @@ export default function Text({
     return(
         <TextField 
             variant="outlined"
-            className={colors().root}
+            className={(colors) ? colors().root : undefined}
             type={type}
             value={value}
             label={label}

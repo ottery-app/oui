@@ -26,8 +26,10 @@ function Input({
     fields, //this is for the menu
     link,
     supported,
+    regex,
 }) {
     const [content, setContent] = React.useState();
+    const [status, setStatus] = React.useState(state);
 
     const props = {
         type,
@@ -39,11 +41,11 @@ function Input({
         supported
     };
 
-    const defaultColor = colorPipe(primaryColor, "primaryColor", state);
-    const hoverColor = colorPipe(secondaryColor, "secondaryColor", state);
-    const focusColor = colorPipe(secondaryColor, "secondaryColor", state);
-    const textColor = colorPipe(primaryTextColor, "primaryTextColor", state);
-    const textColorLight = colorPipe(secondaryTextColor, "secondaryTextColor", state);
+    const defaultColor = colorPipe(primaryColor, "primaryColor", status);
+    const hoverColor = colorPipe(secondaryColor, "secondaryColor", status);
+    const focusColor = colorPipe(secondaryColor, "secondaryColor", status);
+    const textColor = colorPipe(primaryTextColor, "primaryTextColor", status);
+    const textColorLight = colorPipe(secondaryTextColor, "secondaryTextColor", status);
 
     const colors = makeStyles({
         root: {
@@ -79,6 +81,21 @@ function Input({
         }
     });
 
+    React.useEffect(() => {
+        if (regex) {
+            if (value) {
+                if (regex.test(value)) {
+                    setStatus("success");
+                } else {
+                    setStatus("error");
+                }
+            } else {
+                setStatus("default");
+            }
+        }
+    },[value]);
+
+    React.useEffect(() => {
         //this is here to block a repeated class name of id in a lower level.
         //The user should only be able to set a variable at the highest level
         switch (type) {
@@ -97,6 +114,7 @@ function Input({
             default:
                 throw new Error("Input type not supported");
         }
+    }, [value, status]);
 
     return (
         <div id={id} className={"oui-input " + className}>{content}</div>
