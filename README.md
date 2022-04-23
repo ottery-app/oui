@@ -100,7 +100,9 @@ This is the AddButton component. It is a button with an onClick callback and loo
 It has three states that it is able to be in filled (default), outline, and text.
 </p>
 
+<p align="center">
 <img src="./docs/images/AddButton.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -118,7 +120,9 @@ It has three states that it is able to be in filled (default), outline, and text
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -134,7 +138,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -150,7 +156,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -166,7 +174,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -182,7 +192,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -198,7 +210,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -214,7 +228,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -230,7 +246,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -246,7 +264,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -262,7 +282,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -278,7 +300,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -294,7 +318,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -310,7 +336,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -326,7 +354,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
@@ -342,7 +372,9 @@ code
 Description
 </p>
 
-<img src="" alt="image"/>
+<p align="center">
+    <img src="./docs/images/name.png" alt="image"/>
+</p>
 
 <h4>Usage:</h4>
 
