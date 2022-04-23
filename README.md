@@ -30,7 +30,8 @@ Possible issues:
 <img src="./docs/images/MainHeader.png" alt="image of MainHeader class"/>
 
 <h4>Usage:</h4>
-```
+
+```React
 this is a test
 ```
 
