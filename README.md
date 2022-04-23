@@ -73,7 +73,9 @@ This header will fill to fit the width of the parent container. This can be chan
 oui-multi-field-header or by passing in a class name or id.
 </p>
 
-<img src="./docs/images/MultiFieldHeader.png" alt="image of MultiFieldHeader component" height="80px"/>
+<p align="center">
+    <img src="./docs/images/MultiFieldHeader.png" alt="image of MultiFieldHeader component" height="100px"/>
+</p>
 
 <h4>Usage:</h4>
 
