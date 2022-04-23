@@ -60,7 +60,7 @@ or attaching an id or class name as a property.
     right={<IconButton icon="info" />}
 />
 ```
-<a>See docs for more details</a>
+<a href="">See source code for more details</a>
 
 <hr></hr>
 
@@ -88,23 +88,26 @@ oui-multi-field-header or by passing in a class name or id.
     <span key="3">3</span>
 </MultiFieldHeader>
 ```
-<a>See docs for more details</a>
+<a href="">See source code for more details</a>
 
 # buttons
 
 <h3>AddButton</h3>
 <p>
-Description
+This is the AddButton component. It is a button with an onClick callback and looks like a generic add sign.
+It has three states that it is able to be in filled (default), outline, and text.
 </p>
 
-<img src="" alt="image"/>
+<img src="./docs/images/AddButton.png" alt="image"/>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<AddButton type="outline" />
+<AddButton type="text" />
+<AddButton type="filled" />
 ```
-<a>See docs for more details</a>
+<a href="">See source code for more details</a>
 
 <hr><hr/>
 
@@ -120,7 +123,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 <hr></hr>
 
@@ -136,7 +139,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 <hr></hr>
 
@@ -152,7 +155,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 <hr></hr>
 
@@ -168,7 +171,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 <hr></hr>
 
@@ -184,7 +187,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 <hr></hr>
 
@@ -200,7 +203,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 # footers
 
@@ -216,7 +219,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 # images
 
@@ -232,7 +235,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 # inputs
 
@@ -248,7 +251,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 <hr></hr>
 
@@ -264,7 +267,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 <hr></hr>
 
@@ -280,7 +283,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 <hr></hr>
 
@@ -296,7 +299,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 # lists
 
@@ -312,7 +315,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 <hr></hr>
 
@@ -328,7 +331,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 # progressBars
 
@@ -344,7 +347,7 @@ Description
 ```javascript
 code
 ```
-<a>See docs for more details</a>
+<a>See source code for more details</a>
 
 # styles
 
@@ -352,6 +355,8 @@ code
 <p>
 Description
 </p>
+<a>See source code for more details</a>
+
 
 <hr></hr>
 
@@ -359,6 +364,8 @@ Description
 <p>
 Description
 </p>
+<a>See source code for more details</a>
+
 
 <hr></hr>
 
@@ -366,6 +373,7 @@ Description
 <p>
 Description
 </p>
+<a>See source code for more details</a>
 
 <hr></hr>
 
@@ -373,6 +381,8 @@ Description
 <p>
 Description
 </p>
+<a>See source code for more details</a>
+
 
 <hr></hr>
 
@@ -380,3 +390,4 @@ Description
 <p>
 Description
 </p>
+<a>See source code for more details</a>
