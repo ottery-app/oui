@@ -441,7 +441,13 @@ OrderedList is used to display a list of items in a container while provinding a
 <h4>Usage:</h4>
 
 ```javascript
-code
+<OrderedList sort={(a,b)=>{
+        return (a.props.key < a.props.key) ? -1 : 1;
+      }}>
+    <ImageButton key={1} content={"user 1"} right="pfp"/>
+    <ImageButton key={2} content={"user 2"} right="pfp"/>
+    <ImageButton key={3} content={"user 3"} right="pfp"/>
+</OrderedList>
 ```
 <a href="https://github.com/ottery-app/oui/blob/main/lists/OrderedList.js">See source code for more details</a>
 
@@ -471,25 +477,19 @@ UnorderedList is used to display a list of items in a container while provinding
 
 <h3>StepBar</h3>
 <p>
-Description
+The step bar is designed to be used in multifield forms allowing quick on click access to a page of  the form an clear denotation of your location in the form.
 </p>
 
 <p align="center">
-    <img src="./docs/images/OrderedList.png" alt="image"/>
+    <img src="./docs/images/StepBar.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-<OrderedList sort={(a,b)=>{
-        return (a.props.key < a.props.key) ? -1 : 1;
-      }}>
-    <ImageButton key={1} content={"user 1"} right="pfp"/>
-    <ImageButton key={2} content={"user 2"} right="pfp"/>
-    <ImageButton key={3} content={"user 3"} right="pfp"/>
-</OrderedList>
+<StepBar numFields={3} current={val} onClick={(val)=>{setVal(val)}} />
 ```
-<a href="https://github.com/ottery-app/oui/blob/main/lists/OrderedList.js">See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/progressBars/stepBar.js">>See source code for more details</a>
 
 # styles
 

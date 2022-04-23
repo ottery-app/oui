@@ -32,8 +32,22 @@ const Progress = styled.div`
     justify-content: space-between;
 `;
 
-
+/**
+ * The step bar is designed to be used in multifield forms allowing quick on click access to a page of 
+ * the form an clear denotation of your location in the form. It starts counting at 1.
+ * @param {string} id - The id of the step bar.
+ * @param {string} className - The class name of the step bar.
+ * @param {int} numFields - The number of fields in the step bar. This can be any quantity of fields.
+ * @param {int} current - The current field that the user is on.
+ * @param {string} primaryColor - The primary color of the step bar. Can be a hex value or a color name.
+ * @param {string} secondaryColor - The secondary color of the step bar. Can be a hex value or a color name.
+ * @param {string} primaryTextColor - The primary text color of the step bar. Can be a hex value or a color name.
+ * @param {string} secondaryTextColor - The secondary text color of the step bar. Can be a hex value or a color name.
+ * @param {function} onClick - The callback function that is called when a field is clicked on. That value of the field is passed into the function.
+ */
 export default function StepBar({
+    id,
+    className,
     numFields,
     current,
     primaryColor=tertiary,
@@ -51,7 +65,7 @@ export default function StepBar({
     };
 
     return(
-        <Progress>
+        <Progress id={id} className={"oui-step-bar " + className}>
             <Bar primaryColor={primaryColor} />
             {Array.from(Array(numFields).keys()).map((num)=>{
                 if (num === current - 1) {
