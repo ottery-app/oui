@@ -385,7 +385,7 @@ Description
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/InputMenu.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
