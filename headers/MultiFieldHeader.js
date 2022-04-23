@@ -54,6 +54,25 @@ const Edit = styled.div`
     grid-row: 1;
 `;
 
+/**
+ * This is the MultiFieldHeader component. It allows for a header with mutiple fields
+ * through the use of a key callback.
+ * It also includes an edit button that can be called using the onEdit callback.
+ * This header will fill to fit the width of the parent container. This can be changed by editing the className.
+ * oui-multi-field-header or by passing in a class name or id.
+ * @param {string} id - The id of the header.
+ * @param {string} className - The class name of the header.
+ * @param {string} title - The title of the header. This is displayed as information.
+ * @param {string} src - The picture of the field. This can either be a link or a default image option as seen in oui/images/Image.js.
+ * @param {Object} onTab - The callback for when a tab button is clicked. The callback can expect to recieve the key of the tab that was clicked on.
+ * @param {Object} onEdit - The callback for when the edit button is clicked. if this callback is not provided the button is not avalable.
+ * @param {string} primaryColor - The primary color of the header. This is the color used in the tab buttons.
+ * @param {string} secondaryColor - The secondary color of the header. this is the secondary color used in the tab buttons.
+ * @param {string} tertiaryColor - The tertiary color of the header. This is the background color of the header.
+ * 
+ * 
+ * @returns 
+ */
 export default function MultiFieldHeader({
     id,
     className,

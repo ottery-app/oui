@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {height} from "../styles/headers";
+import {height} from "../styles/banners";
 import { primary } from "../styles/colors";
 
 const Header = styled.header`
