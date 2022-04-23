@@ -24,8 +24,8 @@ import {
 } from "react-icons/bi";
 
 import {
-    GrFormEdit,
-} from "react-icons/gr";
+    RiPencilLine,
+} from "react-icons/ri";
 
 import React from "react";
 import styled from "styled-components";
@@ -49,7 +49,7 @@ const icons = {
     search: BiSearch,
     pluss: BiPlus,
     minus: BiMinus,
-    edit: GrFormEdit,
+    edit: RiPencilLine,
 }
 
 const Icon = styled.span`

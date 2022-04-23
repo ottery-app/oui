@@ -11,7 +11,13 @@ export default function OrderedList({
     children,
     sort,
 }) {
-    console.warn("as of now the ordered list does not sort");
+
+    let childrenArray = [...children];
+
+    if (sort===undefined) {
+        console.warn("oui: Warning. OrderedList has no sort. Displaying images in unsorted order.");
+    }
+    
     return(
         <UnorderedList
             id={id}
@@ -22,7 +28,7 @@ export default function OrderedList({
             secondaryColor={secondaryColor}
             primaryTextColor={primaryTextColor}
         >
-            {children}
+            {childrenArray.sort(sort)}
         </UnorderedList>
     );
 }
