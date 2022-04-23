@@ -60,7 +60,7 @@ or attaching an id or class name as a property.
     right={<IconButton icon="info" />}
 />
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/headers/MainHeader.js">See source code for more details</a>
 
 <hr></hr>
 
@@ -90,7 +90,7 @@ oui-multi-field-header or by passing in a class name or id.
     <span key="3">3</span>
 </MultiFieldHeader>
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/headers/MultiFieldHeader.js">See source code for more details</a>
 
 # buttons
 
@@ -111,7 +111,7 @@ It has three states that it is able to be in filled (default), outline, and text
 <AddButton type="text" />
 <AddButton type="filled" />
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/buttons/AddButton.js">See source code for more details</a>
 
 <hr><hr/>
 
@@ -132,7 +132,7 @@ It has three states that it is able to be in filled (default), outline, and text
 <Button type="text">text</Button>
 <Button type="filled">filled</Button>
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/buttons/Button.js">See source code for more details</a>
 
 <hr></hr>
 
@@ -163,7 +163,7 @@ This is the IconButton. It is a large set of buttons that the user is able to ch
 <IconButton icon="minus" />
 <IconButton icon="edit" />
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/buttons/IconButton.js">See source code for more details</a>
 
 <hr></hr>
 
@@ -196,7 +196,7 @@ This is the ImageButton. It is nifty because it allows the user to create button
     state={"success"}
 />
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/buttons/ImageButton.js">See source code for more details</a>
 
 <hr></hr>
 
@@ -218,43 +218,29 @@ The selection button is used in tandem with a list of items. As items get select
 <br></br>
 <SelectionButton state="success"/>
 ```
-<a>See source code for more details</a>
-
-<hr></hr>
-
-<h3>SelectionButton</h3>
-<p>
-Description
-</p>
-
-<p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
-</p>
-
-<h4>Usage:</h4>
-
-```javascript
-code
-```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/buttons/SelectionButton.js">See source code for more details</a>
 
 <hr></hr>
 
 <h3>TabButtons</h3>
 <p>
-Description
+Tab buttons are buttons that are in a line. They work the same was that the tabs on your browser work. They are infact modeled after radio buttons. You can only have one selected at a time. They are used to toggle between views and pages. It is important to note that the children of this element are the ones that should have the onClick. Not the tabBar.
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/TabButtons.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<TabButtons>
+    <div onClick={click}>Tab 1</div>
+    <div onClick={click}>Tab 2</div>
+    <div onClick={click}>Tab 3</div>
+</TabButtons>
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/buttons/TabButtons.js">See source code for more details</a>
 
 # footers
 
