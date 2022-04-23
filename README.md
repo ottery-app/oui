@@ -1,6 +1,6 @@
-# ottery-ui
+# oui (ottery-ui)
 <p>
-This is a react based ui framework following the ottery design schema. The objective of this software is to provide a simple and easy to use react library that is used by ottery and others who like it.
+This is a react based ui framework following the ottery design schema. The objective of this software is to provide a simple and easy to use react library that is used by ottery and others who like it. The hope is that it allows users to get the benifits of fast paced design while still feeling easy to use like classic html.
 </p>
 
 <p>
