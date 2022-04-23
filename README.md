@@ -74,7 +74,7 @@ oui-multi-field-header or by passing in a class name or id.
 </p>
 
 <p align="center">
-    <img src="./docs/images/MultiFieldHeader.png" alt="image of MultiFieldHeader component" height="100px"/>
+    <img src="./docs/images/MultiFieldHeader.png" alt="image of MultiFieldHeader component" height="120px"/>
 </p>
 
 <h4>Usage:</h4>
