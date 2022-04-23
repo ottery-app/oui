@@ -36,6 +36,7 @@ const Butt = styled.button`
  * @param {*} children - The children of the button. This is the what will be displayed on the button.
  * @param {string} height - The height of the button. Should be in any css size format.
  * @param {string} width - The width of the button. Should be in any css size format.
+ * @returns {React.Component} The button component.
  */
 export default function Button({
     id,

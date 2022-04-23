@@ -30,6 +30,24 @@ const Canvas = styled.div`
     margin-top:2px;
 `;
 
+/**
+ * This is the ImageButton. It is nifty because it allows the user to create buttons with built
+ * in image alignment. It has three states that it can be in: default, selected, and error.
+ * These will change the styling of the buttons. Aditionally you also have acess to all the
+ * default icons saved in Image. It is important to note that this can also use custom images.
+ * @props {string} id - The id of the button. Used in css to style the button.
+ * @props {string} className - The class name of the button. Used in css to style the button.
+ * @props {string} left - The left image of the button. This is the image that will be displayed on the left of the button. This should either be the src to an image or a default of Image.js
+ * @props {string} right - The right image of the button. This is the image that will be displayed on the right of the button. This should either be the src to an image or a default of Image.js
+ * @props {string} content - The center image of the button. This is the content that will be displayed in the center of the button.
+ * @props {string} primaryColor - The primary color of the button. This can be either a hex code or a color name. The primary color is used to modify the background color of the button.
+ * @props {string} secondaryColor - The secondary color of the button. This can be either a hex code or a color name. The secondary color is used to modify the border color of the button.
+ * @props {string} primaryTextColor - The primary text color of the button. This can be either a hex code or a color name. The primary text color is used to modify the text color of the button.
+ * @props {string} radius - The radius of the button. Should be in any css size format.
+ * @props {string} state - The state of the button. Can be default, selected, or error.
+ * @props {string} onClick - The function that will be called when the button is clicked.
+ * @returns {React.Component} - A React component that will render a button.
+ */
 function ImageButton({
     id,
     className,
@@ -41,6 +59,7 @@ function ImageButton({
     primaryTextColor=textDark,
     radius=radiusRound,
     state,
+    onClick,
 }) {
     let props = {
         id,
@@ -53,6 +72,7 @@ function ImageButton({
         primaryTextColor,
         radius,
         state,
+        onClick,
     }
 
     const [leftimg] = React.useState((()=>{

@@ -60,7 +60,7 @@ or attaching an id or class name as a property.
     right={<IconButton icon="info" />}
 />
 ```
-<a href="">See source code for more details</a>
+<a>See source code for more details</a>
 
 <hr></hr>
 
@@ -90,7 +90,7 @@ oui-multi-field-header or by passing in a class name or id.
     <span key="3">3</span>
 </MultiFieldHeader>
 ```
-<a href="">See source code for more details</a>
+<a>See source code for more details</a>
 
 # buttons
 
@@ -111,7 +111,7 @@ It has three states that it is able to be in filled (default), outline, and text
 <AddButton type="text" />
 <AddButton type="filled" />
 ```
-<a href="">See source code for more details</a>
+<a>See source code for more details</a>
 
 <hr><hr/>
 
@@ -138,17 +138,30 @@ It has three states that it is able to be in filled (default), outline, and text
 
 <h3>IconButton</h3>
 <p>
-Description
+This is the IconButton. It is a large set of buttons that the user is able to chose from and modify. These images were found in <a href="https://react-icons.github.io/react-icons/">react-icons</a>
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/IconButton.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<IconButton icon="back" />
+<IconButton icon="forward" />
+<IconButton icon="menu" />
+<IconButton icon="home" />
+<IconButton icon="user" />
+<IconButton icon="dropoff" />
+<IconButton icon="pickup" />
+<IconButton icon="settings" />
+<IconButton icon="calendar" />
+<IconButton icon="info" />
+<IconButton icon="search" />
+<IconButton icon="pluss" />
+<IconButton icon="minus" />
+<IconButton icon="edit" />
 ```
 <a>See source code for more details</a>
 
@@ -156,35 +169,54 @@ code
 
 <h3>ImageButton</h3>
 <p>
-Description
+This is the ImageButton. It is nifty because it allows the user to create buttons with built in image alignment. It has three states that it can be in: default, selected, and error. These will change the styling of the buttons. Aditionally you also have acess to all the default icons saved in <a href= "#Image">Image</a>. It is important to note that this can also use custom images.
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/ImageButton.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<ImageButton 
+    content={"ImageButton"}
+    right={"pfp"}
+/>
+<br></br>
+<ImageButton 
+    content={"ImageButton"}
+    right={"pfp"}
+    state={"error"}
+/>
+<br></br>
+<ImageButton 
+    content={"ImageButton"}
+    right={"pfp"}
+    state={"success"}
+/>
 ```
 <a>See source code for more details</a>
 
 <hr></hr>
 
-<h3>ImageButton</h3>
+<h3>SelectionButton</h3>
 <p>
-Description
+The selection button is used in tandem with a list of items. As items get selected its number should increase through the val field. And finally the button can be pressed by the user when they have the number of elements selected that they desire. It has two other states it can be in error and success.
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/SelectionButton.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<SelectionButton/>
+<br></br>
+<SelectionButton state="error"/>
+<br></br>
+<SelectionButton state="success"/>
 ```
 <a>See source code for more details</a>
 

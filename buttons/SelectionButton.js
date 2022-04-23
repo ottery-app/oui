@@ -36,6 +36,23 @@ const Selection = styled.div`
     border-radius: ${props=>props.radius};
 `;
 
+/**
+ * The selection button is used in tandem with a list of items. As items get selected its
+ * number should increase through the val field. And finally the button can be pressed by
+ * the user when they have the number of elements selected that they desire. It has two other 
+ * states it can be in error and success.
+ * @props {string} id - The id of the button. Used in css to style the button.
+ * @props {string} className - The class name of the button. Used in css to style the button.
+ * @props {string} primaryColor - The primary color of the button. This can be either a hex code or a color name. The primary color is used to modify the background color of the button.
+ * @props {string} secondaryColor - The secondary color of the button. This can be either a hex code or a color name. The secondary color is used to modify the border color of the button.
+ * @props {string} primaryTextColor - The primary text color of the button. This can be either a hex code or a color name. The primary text color is used to modify the text color of the button.
+ * @props {string} secondaryTextColor - The secondary text color of the button. This can be either a hex code or a color name. The secondary text color is used to modify the text color of the button.
+ * @props {string} state - The state of the button. This can be either error or success. The state is used to modify the background color of the button.
+ * @props {string} radius - The radius of the button. This can be either a number or a radius name. The radius is used to modify the border radius of the button.
+ * @props {int} itemCount - The number of items selected.
+ * @props {Object} itemTitle - the two different states that the title can be in. Plural and singular.
+ * @returns {React.Component} The selection button.
+ */
 function SelectionButton({
     itemCount=0,
     itemTitle=["item", "items"],
