@@ -4,6 +4,14 @@ import dice from "./dice.svg";
 import check from "./check.svg";
 import alert from "./alert.svg";
 
+const defaults = {
+    gear,
+    pfp,
+    dice,
+    check,
+    alert
+};
+
 /**
  * this is the same as a regular image tag however it has a few extra features. For one it allows the user access to default images.
  * secondly it throws warnings when best practices are not followed.
@@ -19,30 +27,6 @@ import alert from "./alert.svg";
  * 
  */
 function Image({src, alt, width, height, id, className, onClick}) {
-    switch (src) {
-        case "alert":
-            src = alert;
-            alt = "alert";
-            break;
-        case "check":
-            src = check;
-            alt = "check";
-            break;
-        case "dice":
-            src = dice;
-            alt = "dice";
-            break;
-        case "gear":
-            src = gear;
-            alt = "gear";
-            break;
-        case "pfp":
-            src = pfp;
-            alt = "pfp";
-            break;
-        default:
-            src = src;
-    }
 
     if (alt === undefined) {
         console.warn("oui: Image should always have a alt field");
@@ -59,7 +43,7 @@ function Image({src, alt, width, height, id, className, onClick}) {
     return (
         <img 
             id={id}
-            src={src} 
+            src={(defaults[src]) ? defaults[src] : src} 
             alt={alt} 
             width={width} 
             height={height}
