@@ -22,3 +22,6 @@ npm install @material-ui/core --save-dev
 
 <h3>npm install</h3>
 todo...
+
+npx sb init
+npm install core-js@^3.0.1 --save-dev
