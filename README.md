@@ -27,3 +27,5 @@ npx sb init
 npm install core-js@^3.0.1 --save-dev
 
 npm install rollup rollup-plugin-babel @rollup/plugin-node-resolve rollup-plugin-peer-deps-external --save-dev
+npm install @babel/preset-react
+
