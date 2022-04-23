@@ -295,57 +295,87 @@ secondly it throws warnings when best practices are not followed.
 
 # inputs
 
+<h3>Info</h3>
+ The inputs are unique in the fact that they all filter through one tag "<Input/>"
+ Input fields are already messy so adding on a bunch of different types of ways to
+ get input from the user only made it even messier. As a result we wanted to make all
+ forms of input easy to use and similar in their aplication.
+  
+ Additionally I belive that all all user input should be carfully validated to help both the user and application. 
+ In order to do that an input prop called regex is used. When this field is passed in the input field will change
+ colors to success and error based on if the users input is valid according to the regex prop passed in.
+  
+  There are a few different types of inputs:
+   - Text inuts
+   - Date inputs
+   - Menu inputs
+  
+ These three inputs can be used interchangably. However. there are a few differences between them that you need to be aware of.
+
+ <a href="https://github.com/ottery-app/oui/blob/main/input/Input.js">view the parent class source code for more details</a>
+
 <h3>Text Input</h3>
 <p>
-Description
+Text inputs are used for text input fields. They behave like regular text input fields and can be handled using standard best practices.
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/TextInput.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<Input 
+    type="text"
+    label="Text Input"
+    regex={/regex/}
+    value={val}
+    onChange={(e)=>{setVal(e.target.value)}}
+/>
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/input/inputs/Text.js">See source code for more details</a>
 
 <hr></hr>
 
 <h3>Password Input</h3>
 <p>
-Description
+Password inputs are just text inputs that hide the user input. They behave like regular text input fields and can be handled using standard best practices.
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/PasswordInput.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<Input 
+    type="passwod"
+    label="password"
+    value={val}
+    onChange={(e)=>{setVal(e.target.value)}}
+/>
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/input/inputs/Text.js">See source code for more details</a>
 
 <hr></hr>
 
 <h3>Date Input</h3>
 <p>
-Description
+Date inputs are used for date input fields. They are used to get a date from the user. The date is saved in the format yyyy-mm-dd.
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/DateInput.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<Input type="date" label="date" value={val} onChange={(e)=>{setVal(e.target.value)}}/>
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/input/inputs/Date.js">See source code for more details</a>
 
 <hr></hr>
 
@@ -361,9 +391,41 @@ Description
 <h4>Usage:</h4>
 
 ```javascript
-code
+<Input 
+    type="countries"
+    label="countries"
+    value={countries}
+    onChange={(e)=>{setCountries(e.target.value)}}
+/>
+<Input 
+    type="countries"
+    label="supported countries"
+    value={countries}
+    onChange={(e)=>{setCountries(e.target.value)}}
+    supported
+/>
+<Input 
+    type="states"
+    label="states"
+    value={states}
+    onChange={(e)=>{setStates(e.target.value)}}
+/>
+<Input 
+    type="states"
+    label="supported states"
+    value={states}
+    onChange={(e)=>{setStates(e.target.value)}}
+    supported
+/>
+<Input 
+    type="menu"
+    label="custom"
+    value={custom}
+    onChange={(e)=>{setCustom(e.target.value)}}
+    fields={["field1", "field2"]}
+/>
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/input/inputs/Menu.js">See source code for more details</a>
 
 # lists
 

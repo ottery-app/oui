@@ -7,14 +7,12 @@ function Date({
     onChange,
     colors,
 }) {
-    const [col, setCol] = React.useState((colors) ? colors().root : undefined);
-
     return (
         <TextField 
             variant="outlined"
             type="date"
             InputLabelProps={{shrink: true }}
-            className={col}
+            className={(colors) ? colors().root : undefined}
             value={value}
             label={label}
             onChange={onChange}
