@@ -489,7 +489,7 @@ The step bar is designed to be used in multifield forms allowing quick on click 
 ```javascript
 <StepBar numFields={3} current={val} onClick={(val)=>{setVal(val)}} />
 ```
-<a href="https://github.com/ottery-app/oui/blob/main/progressBars/stepBar.js">>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/progressBars/stepBar.js">See source code for more details</a>
 
 # styles
 
