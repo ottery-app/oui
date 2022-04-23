@@ -31,7 +31,7 @@ Possible issues:
 
 <h4>Usage:</h4>
 
-```React
+```html
 import { MainHeader } from "{relativePath}/oui/index";
 //or
 import MainHeader from "{relativePath}/oui/headers/MainHeader";
