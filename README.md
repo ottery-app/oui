@@ -10,7 +10,7 @@ We felt that it was best that oui was not published or used through npm but inst
 # getting started
 Copy the file into your src folder in a react app and access components either from oui/index.js or directly from their own files. To run the app you need to make sure that you have some dependancies installed. They can be quickly installed using the following code:
 
-```
+```shell
 npm config set legacy-peer-deps true
 npm install react --save-dev
 npm install react-dom --save-dev
@@ -31,7 +31,7 @@ Possible issues:
 
 <h4>Usage:</h4>
 
-```html
+```javascript
 import { MainHeader } from "{relativePath}/oui/index";
 //or
 import MainHeader from "{relativePath}/oui/headers/MainHeader";
