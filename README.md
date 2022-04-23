@@ -117,17 +117,20 @@ It has three states that it is able to be in filled (default), outline, and text
 
 <h3>Button</h3>
 <p>
-Description
+This is the Button component. It is a button with an onClick callback.
+It has three states that it is able to be in filled (default), outline, and text.
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/Button.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<Button type="outline">outlined</Button>
+<Button type="text">text</Button>
+<Button type="filled">filled</Button>
 ```
 <a>See source code for more details</a>
 
