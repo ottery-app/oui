@@ -31,16 +31,7 @@ Possible issues:
 
 <h4>Usage:</h4>
 ```
-import { MainHeader } from "{relativePath}/oui/index";
-//or
-import MainHeader from "{relativePath}/oui/headers/MainHeader";
-
-
-<MainHeader
-    left={<IconButton icon="back" />}
-    main={<h3>HOME</h3>}
-    right={<IconButton icon="info" />}
-/>
+this is a test
 ```
 
 <a>See docs for more details</a>
