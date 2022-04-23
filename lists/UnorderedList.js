@@ -10,6 +10,7 @@ import AddButton from "../buttons/AddButton";
 const Frame = styled.div`
     background-color:${props=>props.primaryColor};
     padding:5px;
+    padding-bottom:20px;
     border:${props=>`2px solid ${props.secondaryColor}`};
     border-radius:${props=>props.radius};
 `;
@@ -37,6 +38,20 @@ const Add = styled.span`
     text-align:right;
 `;
 
+/**
+ * UnorderedList is used to display a list of items in a container while provinding an optional way to add new items.
+ * If the onClick is excluded the option to add new items is not available.
+ * @param {string} id - The id of the list.
+ * @param {string} className - The class name of the list.
+ * @param {string} title - The title of the list.
+ * @param {string} primaryColor - The primary color of the list. can be a hex value or a color name.
+ * @param {string} secondaryColor - The secondary color of the list. can be a hex value or a color name.
+ * @param {string} primaryTextColor - The primary text color of the list. can be a hex value or a color name.
+ * @param {string} radius - The radius of the list. can be any css sizing property.
+ * @param {*} children - The children of the list that are displayed as a list.
+ * @param {function} onClick - The callback function that is called when the add button is clicked.
+ * @returns 
+ */
 export default function UnorderedList({
     id,
     className,

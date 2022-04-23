@@ -431,11 +431,11 @@ Description
 
 <h3>OrderedList</h3>
 <p>
-Description
+OrderedList is used to display a list of items in a container while provinding an optional way to add new items. Additionally it accepts a function which is used to sort the children. If the onClick is excluded the option to add new items is not available.
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/OrderedList.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
@@ -443,25 +443,29 @@ Description
 ```javascript
 code
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/lists/OrderedList.js">See source code for more details</a>
 
 <hr></hr>
 
 <h3>UnorderedList</h3>
 <p>
-Description
+UnorderedList is used to display a list of items in a container while provinding an optional way to add new items. If the onClick is excluded the option to add new items is not available.
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/UnorderedList.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<UnorderedList onClick={()=>{}}>
+    <ImageButton content={"user 1"} right="pfp"/>
+    <ImageButton content={"user 2"} right="pfp"/>
+    <ImageButton content={"user 3"} right="pfp"/>
+</UnorderedList>
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/lists/UnorderedList.js">See source code for more details</a>
 
 # progressBars
 
@@ -471,15 +475,21 @@ Description
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/OrderedList.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<OrderedList sort={(a,b)=>{
+        return (a.props.key < a.props.key) ? -1 : 1;
+      }}>
+    <ImageButton key={1} content={"user 1"} right="pfp"/>
+    <ImageButton key={2} content={"user 2"} right="pfp"/>
+    <ImageButton key={3} content={"user 3"} right="pfp"/>
+</OrderedList>
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/lists/OrderedList.js">See source code for more details</a>
 
 # styles
 
