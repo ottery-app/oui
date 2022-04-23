@@ -493,43 +493,46 @@ The step bar is designed to be used in multifield forms allowing quick on click 
 
 # styles
 
+Oui takes advantage of the use of global values to quickly make elements follow the desired global theme. Below is a description of each set of values, what they do, and where they can be found.
+
+
 <h3>Colors</h3>
 <p>
-Description
+These are the colors that are used to define the default values for the source code. They can be modified in order to have a more custom useage of oui.
 </p>
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/styles/colors.js">See source code for more details</a>
 
 
 <hr></hr>
 
 <h3>Clickable</h3>
 <p>
-Description
+These are the varables that are used for clickable objects. This ui was designed for web aplications and so the sizes for clickable objects are scaled for that. If you wanted to switch to a pc based website you could edit that here.
 </p>
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/styles/clickable.js">See source code for more details</a>
 
 
 <hr></hr>
 
 <h3>banners</h3>
 <p>
-Description
+These are used for handling the sizes of banners such as the header.
 </p>
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/styles/banners.js">See source code for more details</a>
 
 <hr></hr>
 
 <h3>image</h3>
 <p>
-Description
+Here you can find the standards for the different types of images that you can have.
 </p>
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/styles/image.js">See source code for more details</a>
 
 
 <hr></hr>
 
 <h3>radius</h3>
 <p>
-Description
+These are the different types of radi that can be used in the web app. If you wanted to switch to a more square shaped vibe you could change the variables in here.
 </p>
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/styles/radius.js">See source code for more details</a>
