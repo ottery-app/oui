@@ -31,9 +31,9 @@ Possible issues:
 
 <h4>Usage:<h4>
 ```
-import { MainHeader } from '{relativePath}/oui/index';
+import { MainHeader } from "{relativePath}/oui/index";
 //or
-import MainHeader from '{relativePath}/oui/headers/MainHeader';
+import MainHeader from "{relativePath}/oui/headers/MainHeader";
 
 <MainHeader
     left={<IconButton icon="back" />}
