@@ -23,6 +23,15 @@ const Link = styled.div`
     }
 `;
 
+/**
+ * The nav bar is designed for the use of phone apps specifically at the bottom of the sreen.
+ * It takes the children passed into the component and displays them in the nav bar style.
+ * All items in the nav are displaced evenly regardless of how many elements there are in it.
+ * @param {string} id - The id of the nav bar.
+ * @param {string} className - The class name of the nav bar.
+ * @param {Object} children - an array of react elements to be displayed in the nav bar.
+ * @returns {ReactElement} - The nav bar.
+ */
 export default function NavBar({
     id,
     className,

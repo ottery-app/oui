@@ -246,37 +246,52 @@ Tab buttons are buttons that are in a line. They work the same was that the tabs
 
 <h3>NavBar</h3>
 <p>
-Description
+The nav bar is designed for the use of phone apps specifically at the bottom of the sreen.
+It takes the children passed into the component and displays them in the nav bar style.
+All items in the nav are displaced evenly regardless of how many elements there are in it.
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/NavBar.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<NavBar>
+    <IconButton icon={"dropoff"} onClick={()=>{console.log("action 1")}} />
+    <IconButton icon={"calendar"} primaryTextColor={"gray"} onClick={()=>{console.log("action 2")}}/>
+    <IconButton icon={"home"} onClick={()=>{console.log("action 3")}}/>
+    <IconButton icon={"user"} primaryTextColor={"gray"} onClick={()=>{console.log("action 4")}}/>
+    <IconButton icon={"pickup"} onClick={()=>{console.log("action 5")}}/>
+</NavBar>
+<br></br>
+<NavBar>
+    <IconButton icon={"dropoff"} onClick={()=>{console.log("action 1")}} />
+    <IconButton icon={"home"} onClick={()=>{console.log("action 3")}}/>
+    <IconButton icon={"pickup"} onClick={()=>{console.log("action 5")}}/>
+</NavBar>
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/footers/NavBar.js">See source code for more details</a>
 
 # images
 
 <h3>Image</h3>
 <p>
-Description
+This is the same as a regular image tag however it has a few extra features. For one it allows the user access to default images.
+secondly it throws warnings when best practices are not followed.
 </p>
 
 <p align="center">
-    <img src="./docs/images/name.png" alt="image"/>
+    <img src="./docs/images/Image.png" alt="image"/>
 </p>
 
 <h4>Usage:</h4>
 
 ```javascript
-code
+<Image src="gear" alt="gear" width="100px" height="100px" />
 ```
-<a>See source code for more details</a>
+<a href="https://github.com/ottery-app/oui/blob/main/images/Image.js">See source code for more details</a>
 
 # inputs
 
