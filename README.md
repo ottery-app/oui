@@ -113,7 +113,7 @@ It has three states that it is able to be in filled (default), outline, and text
 ```
 <a href="https://github.com/ottery-app/oui/blob/main/buttons/AddButton.js">See source code for more details</a>
 
-<hr><hr/>
+<hr></hr>
 
 <h3>Button</h3>
 <p>
