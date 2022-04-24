@@ -12,15 +12,15 @@ Copy the file into your src folder in a react app and access components either f
 
 ```shell
 npm config set legacy-peer-deps true
-npm install react --save-dev
-npm install react-dom --save-dev
-npm install styled-components --save-dev
-npm install react-icons --save-dev
-npm install @mui/material @emotion/react @emotion/styled --save-dev
-npm install @material-ui/styles --save-dev
-npm install axios --save-dev
-npm install --save-dev @babel/core @babel/cli @babel/preset-env npm install -save @babel/polyfill
-npm install @material-ui/core --save-dev
+npm install react --save
+npm install react-dom --save
+npm install styled-components --save
+npm install react-icons --save
+npm install @mui/material @emotion/react @emotion/styled --save
+npm install @material-ui/styles --save
+npm install axios --save
+npm install --save @babel/core @babel/cli @babel/preset-env npm install -save @babel/polyfill
+npm install @material-ui/core --save
 ```
 Possible issues:
 1. make sure you have no node modules installed in oui. These should be in your main aplication.
