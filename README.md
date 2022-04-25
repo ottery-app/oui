@@ -1,14 +1,14 @@
-# oui (ottery-ui)
+# OUI (Otter-UI)
 <p>
-This is a react based ui framework following the ottery design schema. The objective of this software is to provide a simple and easy to use react library that is used by ottery and others who like it. The hope is that it allows users to get the benifits of fast paced design while still feeling easy to use like classic html.
+This is a React-based UI framework following the Ottery design schema. The objective of this software is to provide a straightforward React library used by Ottery and others who like it. The hope is that it allows users to get the benefits of fast paced design while still feeling easy to use like classic HTML.
 </p>
 
 <p>
-We felt that it was best that oui was not published or used through npm but instead manually added to a project. The reasoning behind this was that we wanted the code to be easily modifiable for your specific needs. For example. You can easily change the basic color theme by going into oui/styles/colors rather then having to deal with pesky and confusing api (yuck). Heck you can even replace a component entirely or switch the way it functions.
+We felt it was best for OUI to be manually added to a project, not published or used through npm. This is because we wanted the code to be easily modifiable for your specific needs. For example, you can easily the basic color theme by going into oui/styles/color, rather than having to deal with pesky and confusing API (yuck). Heck, you can even replace a component entirely or switch they way it functions.
 </p>
 
-# getting started
-Copy the file into your src folder in a react app and access components either from oui/index.js or directly from their own files. To run the app you need to make sure that you have some dependancies installed. They can be quickly installed using the following code:
+# Getting Started
+Copy the file into your src folder in a React app and access components either from oui/index.js or directly from their own files. To run the app, you need to make sure that you have some dependencies installed. They can be quickly installed using the following code:
 
 ```shell
 npm config set legacy-peer-deps true
@@ -23,14 +23,14 @@ npm install --save @babel/core @babel/cli @babel/preset-env npm install -save @b
 npm install @material-ui/core --save
 ```
 Possible issues:
-1. make sure you have no node modules installed in oui. These should be in your main aplication.
+* Ensure you have no node modules installed in oui. These should be in your main application.
 
 # Components
 <p>
-All components are handled based on their global styles. These can be found in oui/styles. They are a list of const exports that are used in the generation of the styled react. <a href="#styles">These</a> can be edited at the users leasure in order to make a more stylized ui.
+All components are handled based on their global styles. These can be found in oui/styles. They are a list of const exports that are used in the generation of the styled react. <a href="#styles">These</a> can be edited at the users leisure in order to make a more stylized UI.
 </p>
 <p>
-components can be imported in two different ways. The first is through accessing the index.js exports or by going directly to the component root. Both do the same thing. However it's always nice to know the options :)
+Components can be imported in two different ways. The first is through accessing the index.js exports or by going directly to the component root. Both do the same thing. However it's always nice to know the options :)
 </p>
 
 For example:
@@ -40,13 +40,10 @@ import { MultiFieldHeader } from "{relativePath}/oui/index";
 import MultiFieldHeader from "{relativePath}/oui/headers/MainHeader";
 ```
 
-# headers
+# Headers
 <h3>MainHeader</h3>
 <p>
-The MainHeader component is the main header of the application. It is used as a banner
-that spreads from left to right. It however on its own does not spread itself forcefully to the top of the page.
-It needs to be put in a container that does so or directly modified to do so using the class name oui-main-header
-or attaching an id or class name as a property.
+The MainHeader component is the main header of the application. It is used as a banner that spreads from left to right, but it does not spread itself forcefully to the top of the page automatically. For it todo so, it needs to be put in a container that does so, directly modified to do so using the class name oui-main-header, or attaching an id or class name as a property.
 </p>
 
 <img src="./docs/images/MainHeader.png" alt="image of MainHeader class"/>
@@ -66,11 +63,8 @@ or attaching an id or class name as a property.
 
 <h3>MultiFieldHeader</h3>
 <p>
-This is the MultiFieldHeader component. It allows for a header with mutiple fields
-through the use of a key callback.
-It also includes an edit button that can be called using the onEdit callback.
-This header will fill to fit the width of the parent container. This can be changed by editing the className.
-oui-multi-field-header or by passing in a class name or id.
+The MultiFieldHeader component allows for a header with multiple fields
+through the use of a key callback. It also includes an edit button that can be called using the onEdit callback. This header will fill to fit the width of the parent container. This can be changed by editing the className oui-multi-field-header or by passing in a class name or id.
 </p>
 
 <p align="center">
@@ -92,12 +86,16 @@ oui-multi-field-header or by passing in a class name or id.
 ```
 <a href="https://github.com/ottery-app/oui/blob/main/headers/MultiFieldHeader.js">See source code for more details</a>
 
-# buttons
+# Buttons
 
 <h3>AddButton</h3>
 <p>
-This is the AddButton component. It is a button with an onClick callback and looks like a generic add sign.
-It has three states that it is able to be in filled (default), outline, and text.
+The AddButton component is a button with an onClick callback and looks like a generic add sign. It has three states that it is able to be in:
+<ol>
+<li> filled (default)</li>
+<li> outline </li>
+<li> text</li>
+</ol>
 </p>
 
 <p align="center">
@@ -117,8 +115,12 @@ It has three states that it is able to be in filled (default), outline, and text
 
 <h3>Button</h3>
 <p>
-This is the Button component. It is a button with an onClick callback.
-It has three states that it is able to be in filled (default), outline, and text.
+The Button component is a button with an onClick callback. It has three states that it is able to be in:
+<ol>
+<li> filled (default)</li>
+<li> outline </li>
+<li> text</li>
+</ol>
 </p>
 
 <p align="center">
@@ -138,7 +140,7 @@ It has three states that it is able to be in filled (default), outline, and text
 
 <h3>IconButton</h3>
 <p>
-This is the IconButton. It is a large set of buttons that the user is able to chose from and modify. These images were found in <a href="https://react-icons.github.io/react-icons/">react-icons</a>
+The IconButton component is a large set of buttons that the user is able to chose from and modify. These images were found in <a href="https://react-icons.github.io/react-icons/">react-icons</a>
 </p>
 
 <p align="center">
@@ -169,7 +171,13 @@ This is the IconButton. It is a large set of buttons that the user is able to ch
 
 <h3>ImageButton</h3>
 <p>
-This is the ImageButton. It is nifty because it allows the user to create buttons with built in image alignment. It has three states that it can be in: default, selected, and error. These will change the styling of the buttons. Aditionally you also have acess to all the default icons saved in <a href= "#Image">Image</a>. It is important to note that this can also use custom images.
+The ImageButton component allows the user to create buttons with built in image alignment (which is pretty nifty). It has three states that it can be in: 
+<ol>
+<li> default </li>
+<li> selected </li>
+<li> error </li>
+</ol>
+These will change the styling of the buttons. Additionally you also have access to all the default icons saved in <a href= "#Image">Image</a>. It is important to note that this can also use custom images.
 </p>
 
 <p align="center">
@@ -202,7 +210,11 @@ This is the ImageButton. It is nifty because it allows the user to create button
 
 <h3>SelectionButton</h3>
 <p>
-The selection button is used in tandem with a list of items. As items get selected its number should increase through the val field. And finally the button can be pressed by the user when they have the number of elements selected that they desire. It has two other states it can be in error and success.
+The SelectionButton component is used in tandem with a list of items. As items get selected, its number increases through the val field. The button can be pressed by the user when they have the number of elements selected that they desire. It has two other states it can be in
+<ol>
+<li> error </li>
+<li> success </li>
+</ol>
 </p>
 
 <p align="center">
@@ -224,7 +236,7 @@ The selection button is used in tandem with a list of items. As items get select
 
 <h3>TabButtons</h3>
 <p>
-Tab buttons are buttons that are in a line. They work the same was that the tabs on your browser work. They are infact modeled after radio buttons. You can only have one selected at a time. They are used to toggle between views and pages. It is important to note that the children of this element are the ones that should have the onClick. Not the tabBar.
+The TabButton component is for buttons that are in a line. They work the same was that the tabs on your browser work, but are in fact modeled after radio buttons (in the sense that you can only have one selected at a time). They are used to toggle between views and pages. It is important to note that the children of this element are the ones that should have the onClick (not the tabBar).
 </p>
 
 <p align="center">
@@ -242,13 +254,11 @@ Tab buttons are buttons that are in a line. They work the same was that the tabs
 ```
 <a href="https://github.com/ottery-app/oui/blob/main/buttons/TabButtons.js">See source code for more details</a>
 
-# footers
+# Footers
 
 <h3>NavBar</h3>
 <p>
-The nav bar is designed for the use of phone apps specifically at the bottom of the sreen.
-It takes the children passed into the component and displays them in the nav bar style.
-All items in the nav are displaced evenly regardless of how many elements there are in it.
+The NavBar is designed for use on phone applications at the bottom of the screen. It takes the children passed into the component and displays them in the nav bar style. All items in the nav are displaced evenly, regardless of how many elements there are in it.
 </p>
 
 <p align="center">
@@ -274,12 +284,11 @@ All items in the nav are displaced evenly regardless of how many elements there 
 ```
 <a href="https://github.com/ottery-app/oui/blob/main/footers/NavBar.js">See source code for more details</a>
 
-# images
+# Images
 
 <h3>Image</h3>
 <p>
-This is the same as a regular image tag however it has a few extra features. For one it allows the user access to default images.
-secondly it throws warnings when best practices are not followed.
+This is the same as a regular image tag, however it has a few extra features. First, it allows the user access to default images. Second, it throws warnings when best practices are not followed.
 </p>
 
 <p align="center">
@@ -293,24 +302,20 @@ secondly it throws warnings when best practices are not followed.
 ```
 <a href="https://github.com/ottery-app/oui/blob/main/images/Image.js">See source code for more details</a>
 
-# inputs
+# Inputs
 
 <h3>Info</h3>
  The inputs are unique in the fact that they all filter through one tag "<Input/>"
- Input fields are already messy so adding on a bunch of different types of ways to
- get input from the user only made it even messier. As a result we wanted to make all
- forms of input easy to use and similar in their aplication.
+Input fields are already messy, so adding multiples ways to get input from the user only made it messier. As a result, we wanted to make all forms of input easy to use and similar in their application.
   
- Additionally I belive that all all user input should be carfully validated to help both the user and application. 
- In order to do that an input prop called regex is used. When this field is passed in the input field will change
- colors to success and error based on if the users input is valid according to the regex prop passed in.
+Additionally, I believe that all user input should be carefully validated to help both the user and application. In order to do so, an input prop called regex is used. When this field is passed in, the input field will change colors to success and error based on if the users input is valid according to the regex prop passed in.
   
-  There are a few different types of inputs:
+There are a few different types of inputs:
    - Text inuts
    - Date inputs
    - Menu inputs
   
- These three inputs can be used interchangably. However. there are a few differences between them that you need to be aware of.
+These three inputs can be used interchangeably. However. there are a few differences between them that you need to be aware of.
 
  <a href="https://github.com/ottery-app/oui/blob/main/input/Input.js">view the parent class source code for more details</a>
 
@@ -381,7 +386,7 @@ Date inputs are used for date input fields. They are used to get a date from the
 
 <h3>Menu Input</h3>
 <p>
-Description
+Description - WIP
 </p>
 
 <p align="center">
@@ -427,11 +432,11 @@ Description
 ```
 <a href="https://github.com/ottery-app/oui/blob/main/input/inputs/Menu.js">See source code for more details</a>
 
-# lists
+# Lists
 
 <h3>OrderedList</h3>
 <p>
-OrderedList is used to display a list of items in a container while provinding an optional way to add new items. Additionally it accepts a function which is used to sort the children. If the onClick is excluded the option to add new items is not available.
+OrderedList is used to display a list of items in a container while providing an optional way to add new items. Additionally it accepts a function which is used to sort the children. If the onClick is excluded the option to add new items is not available.
 </p>
 
 <p align="center">
@@ -455,7 +460,7 @@ OrderedList is used to display a list of items in a container while provinding a
 
 <h3>UnorderedList</h3>
 <p>
-UnorderedList is used to display a list of items in a container while provinding an optional way to add new items. If the onClick is excluded the option to add new items is not available.
+UnorderedList is used to display a list of items in a container while providing an optional way to add new items. If the onClick is excluded the option to add new items is not available.
 </p>
 
 <p align="center">
@@ -473,11 +478,11 @@ UnorderedList is used to display a list of items in a container while provinding
 ```
 <a href="https://github.com/ottery-app/oui/blob/main/lists/UnorderedList.js">See source code for more details</a>
 
-# progressBars
+# Progress Bars
 
 <h3>StepBar</h3>
 <p>
-The step bar is designed to be used in multifield forms allowing quick on click access to a page of  the form an clear denotation of your location in the form.
+The StepBar component is designed to be used in multifield forms allowing quick on click access to a page of  the form an clear denotation of your location in the form.
 </p>
 
 <p align="center">
@@ -491,14 +496,14 @@ The step bar is designed to be used in multifield forms allowing quick on click 
 ```
 <a href="https://github.com/ottery-app/oui/blob/main/progressBars/stepBar.js">See source code for more details</a>
 
-# styles
+# Styles
 
-Oui takes advantage of the use of global values to quickly make elements follow the desired global theme. Below is a description of each set of values, what they do, and where they can be found.
+OUI takes advantage of the use of global values to quickly make elements follow the desired global theme. Below is a description of each set of values, what they do, and where they can be found.
 
 
 <h3>Colors</h3>
 <p>
-These are the colors that are used to define the default values for the source code. They can be modified in order to have a more custom useage of oui.
+These are the colors that are used to define the default values for the source code. They can be modified in order to have a more custom usage of OUI.
 </p>
 <a href="https://github.com/ottery-app/oui/blob/main/styles/colors.js">See source code for more details</a>
 
@@ -507,14 +512,14 @@ These are the colors that are used to define the default values for the source c
 
 <h3>Clickable</h3>
 <p>
-These are the varables that are used for clickable objects. This ui was designed for web aplications and so the sizes for clickable objects are scaled for that. If you wanted to switch to a pc based website you could edit that here.
+These are the variables that are used for clickable objects. This UI was designed for web applications, and so the sizes for clickable objects are scaled for that. If you wanted to switch to a PC-based website, you could edit that here.
 </p>
 <a href="https://github.com/ottery-app/oui/blob/main/styles/clickable.js">See source code for more details</a>
 
 
 <hr></hr>
 
-<h3>banners</h3>
+<h3>Banners</h3>
 <p>
 These are used for handling the sizes of banners such as the header.
 </p>
@@ -522,7 +527,7 @@ These are used for handling the sizes of banners such as the header.
 
 <hr></hr>
 
-<h3>image</h3>
+<h3>Image</h3>
 <p>
 Here you can find the standards for the different types of images that you can have.
 </p>
@@ -531,7 +536,7 @@ Here you can find the standards for the different types of images that you can h
 
 <hr></hr>
 
-<h3>radius</h3>
+<h3>Radius</h3>
 <p>
 These are the different types of radi that can be used in the web app. If you wanted to switch to a more square shaped vibe you could change the variables in here.
 </p>
