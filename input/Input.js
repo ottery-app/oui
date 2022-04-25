@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import colorPipe from "../functions/colorPipe";
 import { makeStyles } from "@material-ui/core/styles";
@@ -9,6 +10,10 @@ import Menu from "./inputs/Menu";
 
 import { radiusDefault } from "../styles/radius";
 import { primary, primaryDark, textDark, textPale } from "../styles/colors";
+
+const In = styled.div`
+    width: 100%;
+`;
 
 /**
  * The inputs are unique in the fact that they all filter through one tag "<Input/>"
@@ -166,7 +171,7 @@ function Input({
     }, [value, status]);
 
     return (
-        <div id={id} className={"oui-input " + className}>{content}</div>
+        <In id={id} className={"oui-input " + className}>{content}</In>
     );
 }
 

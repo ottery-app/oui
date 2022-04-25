@@ -4,6 +4,7 @@ import {textLink} from "../styles/colors";
 
 const HyperLink = styled.a`
     color: ${textLink};
+    display: inline;
     &:hover {
         cursor: pointer;
     }
