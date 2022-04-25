@@ -150,6 +150,10 @@ function Input({
     },[value]);
 
     React.useEffect(() => {
+        setStatus(state)
+    },[state]);
+
+    React.useEffect(() => {
         //this is here to block a repeated class name of id in a lower level.
         //The user should only be able to set a variable at the highest level
         switch (type) {
