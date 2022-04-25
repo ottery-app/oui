@@ -1,4 +1,4 @@
-# OUI (Otter-UI)
+# OUI (Ottery-UI)
 <p>
 This is a React-based UI framework following the Ottery design schema. The objective of this software is to provide a straightforward React library used by Ottery and others who like it. The hope is that it allows users to get the benefits of fast paced design while still feeling easy to use like classic HTML.
 </p>
