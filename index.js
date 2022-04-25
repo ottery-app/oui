@@ -12,6 +12,7 @@ import IconButton from "./buttons/IconButton";
 import MultiFieldHeader from "./headers/MultiFieldHeader";
 import NavBar from "./footers/NavBar";
 import MainHeader from "./headers/MainHeader";
+import Link from "./text/Link";
 
 export{
     Input,
@@ -28,4 +29,5 @@ export{
     MultiFieldHeader,
     NavBar,
     MainHeader,
+    Link,
 }

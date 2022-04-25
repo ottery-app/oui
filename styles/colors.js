@@ -31,3 +31,4 @@ export const secondaryTextSuccess = "#3fbd3c";
 export const textDark = "black";
 export const textPale = "#d4d4d4";
 export const textLight = "white";
+export const textLink = "#0078ff";
