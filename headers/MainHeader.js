@@ -29,7 +29,7 @@ const Left = styled.span`
 `;
 
 const Main = styled.span`
-    ${forAll}
+    height: ${height};
     display: float;
     float: left;
 `;
