@@ -12,6 +12,7 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: ${props=>props.primaryColor};
 `;
 
 const Link = styled.div`
@@ -36,9 +37,10 @@ export default function NavBar({
     id,
     className,
     children,
+    primaryColor="white",
 }) {
     return (
-        <Nav id={id} className={"oui-nav-footer " + className}>
+        <Nav id={id} className={"oui-nav-footer " + className} primaryColor={primaryColor}>
             {((children && children.length) ? children.map(child => {
                 return child;
             }) : (()=>{
