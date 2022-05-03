@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {height} from "../styles/banners";
 import { primary } from "../styles/colors";
 
-const Header = styled.header`
+const Header = styled.div`
     background-color: ${props=>props.primaryColor};
     border-bottom: 1px solid ${props=>props.secondaryColor};
     height: ${height};
