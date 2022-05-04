@@ -25,6 +25,7 @@ export default function OrderedList({
     primaryTextColor,
     children,
     sort,
+    maxHeight,
 }) {
 
     let childrenArray = [...children];
@@ -42,6 +43,7 @@ export default function OrderedList({
             primaryColor={primaryColor}
             secondaryColor={secondaryColor}
             primaryTextColor={primaryTextColor}
+            maxHeight={maxHeight}
         >
             {childrenArray.sort(sort)}
         </UnorderedList>

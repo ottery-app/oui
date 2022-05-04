@@ -7,12 +7,25 @@ import {radiusDefault} from "../styles/radius";
 
 import AddButton from "../buttons/AddButton";
 
+/*
+border-radius:${props=>props.radius};
+background-color:${props=>props.primaryColor};
+border:${props=>`2px solid ${props.secondaryColor}`};
+ */
 const Frame = styled.div`
-    background-color:${props=>props.primaryColor};
     padding:5px;
     padding-bottom:20px;
-    border:${props=>`2px solid ${props.secondaryColor}`};
-    border-radius:${props=>props.radius};
+    display:flex;
+    flex-direction:column;
+    height:100%;
+`;
+
+const Content = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    overflow-y:auto;
+    height:100%;
 `;
 
 const Header = styled.div`
@@ -76,11 +89,11 @@ export default function UnorderedList({
                 <Title {...props}>{title}</Title>
                 {(onClick)?<Add><AddButton onClick={onClick} type="text" primaryColor={primaryTextColor} /></Add>:undefined}
             </Header>
-            <div>
+            <Content>
                 {children.map((element, i) => {
                     return <Item key={i}>{element}</Item>
                 })}
-            </div>
+            </Content>
         </Frame>
     );
 }
