@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import {minHeight} from "../styles/clickable";
 import {textDark, tertiary} from '../styles/colors';
-import {radiusDefault} from "../styles/radius";
+import { radiusDefault } from "../styles/radius";
 
 import AddButton from "../buttons/AddButton";
 
@@ -18,6 +18,8 @@ const Frame = styled.div`
     display:flex;
     flex-direction:column;
     height:100%;
+    background-color: ${props=>props.secondaryColor};
+    border-radius: ${props=>props.radius};
 `;
 
 const Content = styled.div`
@@ -68,13 +70,13 @@ const Add = styled.span`
 export default function UnorderedList({
     id,
     className,
-    title = "items",
+    title,
     onClick,
     children,
-    primaryColor=tertiary,
-    secondaryColor=tertiary,
+    primaryColor,
+    secondaryColor,
     primaryTextColor=textDark,
-    radius=radiusDefault,
+    radius,
 }) {
     let props = {
         primaryColor,
@@ -85,10 +87,14 @@ export default function UnorderedList({
 
     return(
         <Frame id={id} className={`oui-list ${className}`} {...props}>
-            <Header>
+            
+            {(title || onClick)
+            ?<Header>
                 <Title {...props}>{title}</Title>
                 {(onClick)?<Add><AddButton onClick={onClick} type="text" primaryColor={primaryTextColor} /></Add>:undefined}
             </Header>
+            :undefined}
+
             <Content>
                 {children.map((element, i) => {
                     return <Item key={i}>{element}</Item>

@@ -9,9 +9,12 @@ export const secondary = "#DFB87E";
 export const secondaryDark = "#b89767";
 
 //TBD
-export const tertiaryLight = undefined
+export const tertiaryLight = undefined;
 export const tertiary = "#f0f0f0";
 export const tertiaryDark = undefined;
+
+//Background
+export const backgroundColor = "white";
 
 //ERROR
 export const primaryError = "#ff5269";

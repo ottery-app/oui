@@ -38,7 +38,6 @@ const Selected = styled.button`
     position: relative;
     top: -2px;
     transform: scale(1.1);
-    z-index:1;
     background-color: ${props=>props.secondaryColor};
     color: ${props=>props.secondaryTextColor};
 `;
