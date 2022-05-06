@@ -39,6 +39,7 @@ export default function AddButton({
             width={diameter}
             height={diameter}
             primaryColor={primaryColor}
+            secondaryColor={primaryColor} 
             primaryTextColor={primaryTextColor}
             radius={radius}
             onClick={onClick}

@@ -39,6 +39,7 @@ const Header = styled.div`
 `;
 
 const Item = styled.div`
+    width: 95%;
     margin: 5px;
 `;
 
