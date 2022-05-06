@@ -25,6 +25,7 @@ export default function AddButton({
     id,
     className,
     primaryColor,
+    secondaryColor=primaryColor,
     primaryTextColor,
     radius=radiusRound,
     diameter=minWidth,
@@ -39,7 +40,7 @@ export default function AddButton({
             width={diameter}
             height={diameter}
             primaryColor={primaryColor}
-            secondaryColor={primaryColor} 
+            secondaryColor={secondaryColor} 
             primaryTextColor={primaryTextColor}
             radius={radius}
             onClick={onClick}

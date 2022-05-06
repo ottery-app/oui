@@ -3,6 +3,7 @@ import ImageButton from "./buttons/ImageButton";
 import SelectionButton from "./buttons/SelectionButton";
 import TabButtons from "./buttons/TabButtons";
 import Image from "./images/Image";
+import EditImage from "./images/EditImage";
 import UnorderedList from "./lists/UnorderedList";
 import OrderedList from "./lists/OrderedList";
 import Button from "./buttons/Button";
@@ -30,4 +31,5 @@ export{
     NavBar,
     MainHeader,
     Link,
+    EditImage,
 }

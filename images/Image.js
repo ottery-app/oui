@@ -1,8 +1,14 @@
+import styled from "styled-components";
+
 import gear from "./gear.svg";
 import pfp from "./pfp.svg";
 import dice from "./dice.svg";
 import check from "./check.svg";
 import alert from "./alert.svg";
+
+const I = styled.img`
+    border-radius: ${props=>props.radius};
+`;
 
 const defaults = {
     gear,
@@ -26,7 +32,7 @@ const defaults = {
  }}
  * 
  */
-function Image({src, alt, width, height, id, className, onClick}) {
+function Image({src, alt, width, height, id, className, onClick, radius}) {
 
     if (alt === undefined) {
         console.warn("oui: Image should always have a alt field");
@@ -37,7 +43,7 @@ function Image({src, alt, width, height, id, className, onClick}) {
     }
 
     return (
-        <img 
+        <I 
             id={id}
             src={(defaults[src]) ? defaults[src] : src} 
             alt={alt} 
@@ -45,6 +51,7 @@ function Image({src, alt, width, height, id, className, onClick}) {
             height={height}
             onClick={onClick}
             className={"oui-image " + className}
+            radius={radius}
         />
     );
 }
