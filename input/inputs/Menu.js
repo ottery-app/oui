@@ -7,12 +7,13 @@ import axios from 'axios';
 export default function Menu({
     link,
     type,
-    supported,
     colors,
     fields=[],
     value,
     label,
     onChange,
+    supported,
+    name,
 }) {
     const [fieldContent, setFieldContent] = React.useState([]);
 
@@ -39,7 +40,7 @@ export default function Menu({
                     response.data = JSON.parse(response.data);
                 }
 
-                setFieldContent(response.data.map(val => val.name));
+                setFieldContent(response.data.map(val => val[(name)?"name":"code"]));
             })
             .catch(error => {
                 console.error("something went wrong. 1. check that the link you provided was correct. 2. the link should be to a json array with this format: [{\"name\":\"val\"}]", error);

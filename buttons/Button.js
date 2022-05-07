@@ -42,7 +42,7 @@ export default function Button({
     id,
     className,
     primaryColor=primary,
-    secondaryColor=primary,
+    secondaryColor=primaryColor,
     primaryTextColor=textLight,
     radius=radiusDefault,
     type="filled", //outline/text
