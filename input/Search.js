@@ -15,7 +15,6 @@ const SearchButton = styled.label`
     z-index: -1;
 `;
 
-
 export default function Search({
     primaryColor = primary,
     secondaryColor = primaryDark,
