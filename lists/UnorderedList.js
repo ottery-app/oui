@@ -99,7 +99,7 @@ export default function UnorderedList({
             <Content>
                 {(children && children.length) ? children.map((element, i) => {
                     return <Item key={i}>{element}</Item>
-                }): <Item>children</Item>}
+                }): <Item>{children}</Item>}
             </Content>
         </Frame>
     );
