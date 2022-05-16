@@ -97,9 +97,9 @@ export default function UnorderedList({
             :undefined}
 
             <Content>
-                {children.map((element, i) => {
+                {(children && children.length) ? children.map((element, i) => {
                     return <Item key={i}>{element}</Item>
-                })}
+                }): <Item>children</Item>}
             </Content>
         </Frame>
     );
