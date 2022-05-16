@@ -14,6 +14,7 @@ import MultiFieldHeader from "./headers/MultiFieldHeader";
 import NavBar from "./footers/NavBar";
 import MainHeader from "./headers/MainHeader";
 import Link from "./text/Link";
+import Faded from "./text/Faded";
 import Search from "./input/Search";
 
 export{
@@ -34,4 +35,5 @@ export{
     Link,
     EditImage,
     Search,
+    Faded,
 }
