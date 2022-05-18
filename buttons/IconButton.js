@@ -9,6 +9,10 @@ import {
 } from "react-icons/ai";
 
 import {
+    FiCheck,
+} from "react-icons/fi";
+
+import {
     IoIosSettings,
 } from "react-icons/io";
 
@@ -34,6 +38,7 @@ import { onHover, minHeight } from "../styles/clickable";
 import { textPale, textDark } from "../styles/colors";
 
 import addPx from "../functions/addPx";
+import { radiusRound } from "../styles/radius";
 
 const icons = {
     back: AiOutlineLeft,
@@ -50,13 +55,26 @@ const icons = {
     pluss: BiPlus,
     minus: BiMinus,
     edit: RiPencilLine,
+    check: FiCheck
 }
 
-const Icon = styled.span`
+const Backdrop = styled.div`
+    background-color: ${props=>props.primaryColor};
+    border: ${props => "1px solid" + props.secondaryColor};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: ${props=>addPx(props.fontSize, 1)};
+    border-radius: ${props=>props.radius};
+`;
+
+
+const Icon = styled.div`
     max-width: ${props=>addPx(props.fontSize, -8)};
     font-size: ${props=>addPx(props.fontSize, -8)};
     color: ${props=>props.primaryTextColor};
-    padding-top: 10px;
+    position: relative;
+    top: 6px;
     &:hover {
         ${onHover}
         color: ${props=>props.secondaryTextColor};
@@ -76,20 +94,28 @@ const Icon = styled.span`
 export default function IconButton({
     icon="forward",
     onClick,
+    primaryColor,
+    secondaryColor = primaryColor,
     secondaryTextColor=textPale,
     primaryTextColor=textDark,
     fontSize=minHeight,
+    radius=radiusRound,
 }) {
     let props = {
+        primaryColor,
+        secondaryColor,
         secondaryTextColor,
         primaryTextColor,
         fontSize,
         onClick,
+        radius,
     }
 
     return (
-        <Icon className="oui-icon-button" {...props}>
-            {React.createElement(icons[icon])}
-        </Icon>
+        <Backdrop {...props}>
+            <Icon className="oui-icon-button" {...props}>
+                {React.createElement(icons[icon])}
+            </Icon>
+        </Backdrop>
     )
 }
