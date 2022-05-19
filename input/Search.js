@@ -10,7 +10,7 @@ const Main = styled.div`
 
 const SearchButton = styled.label`
     position: absolute;
-    top: 9px;
+    top: 4px;
     right: 9px;
     z-index: -1;
 `;

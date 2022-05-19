@@ -50,6 +50,8 @@ const Tab = styled.div`
 `;
 
 const Edit = styled.div`
+    position: relative;
+    top: -10px;
     grid-column: 2;
     grid-row: 1;
 `;
