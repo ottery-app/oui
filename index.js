@@ -16,6 +16,7 @@ import MainHeader from "./headers/MainHeader";
 import Link from "./text/Link";
 import Faded from "./text/Faded";
 import Search from "./input/Search";
+import BottomButton from "./buttons/BottomButton"
 
 export{
     Input,
@@ -36,4 +37,5 @@ export{
     EditImage,
     Search,
     Faded,
+    BottomButton,
 }
