@@ -74,7 +74,7 @@ const Icon = styled.div`
     font-size: ${props=>addPx(props.fontSize, -8)};
     color: ${props=>props.primaryTextColor};
     position: relative;
-    top: 6px;
+    top: 4.5px;
     &:hover {
         ${onHover}
         color: ${props=>props.secondaryTextColor};
