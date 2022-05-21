@@ -23,7 +23,7 @@ export default function BottomButton(props) {
     return (
         <Button>
             {(props.icon === "pluss")
-            ?<AddButton {...pass} />
+            ?<AddButton type="solid" {...pass} />
             :<IconButton {...pass} />}
         </Button>
     );
