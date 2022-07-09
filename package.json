@@ -1,5 +1,5 @@
 {
-  "name": "oui",
+  "name": "ottery-ui",
   "version": "1.2.0",
   "description": "This is a react based ui framework following the ottery design schema.",
   "main": "index.js",
