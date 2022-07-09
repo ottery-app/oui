@@ -21,6 +21,10 @@ npm install @material-ui/styles --save
 npm install axios --save
 npm install --save @babel/core @babel/cli @babel/preset-env npm install -save @babel/polyfill
 npm install @material-ui/core --save
+
+OR
+
+npm install ottery-ui
 ```
 Possible issues:
 * Ensure you have no node modules installed in oui. These should be in your main application.
