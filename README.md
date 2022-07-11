@@ -3,10 +3,6 @@
 This is a React-based UI framework following the Ottery design schema. The objective of this software is to provide a straightforward React library used by Ottery and others who like it. The hope is that it allows users to get the benefits of fast paced design while still feeling easy to use like classic HTML.
 </p>
 
-<p>
-We felt it was best for OUI to be manually added to a project, not published or used through npm. This is because we wanted the code to be easily modifiable for your specific needs. For example, you can easily the basic color theme by going into oui/styles/color, rather than having to deal with pesky and confusing API (yuck). Heck, you can even replace a component entirely or switch they way it functions.
-</p>
-
 # Getting Started
 Copy the file into your src folder in a React app and access components either from oui/index.js or directly from their own files. To run the app, you need to make sure that you have some dependencies installed. They can be quickly installed using the following code:
 
